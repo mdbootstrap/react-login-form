@@ -1,0 +1,3246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Material Design for Bootstrap</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+
+  <!-- Prism -->
+  <link rel="stylesheet" href="https://mdbgo.io/mikolaj-smolenski/mdb5-demo-pro/dev/css/new-prism.css" />
+  <!-- Custom styles -->
+  <style>
+    body {
+      position: relative;
+      padding-top: 0;
+    }
+
+    main {
+      padding-left: 240px;
+    }
+  </style>
+</head>
+
+<body data-mdb-spy="scroll" data-mdb-target="#scrollspy1" data-mdb-offset="1" class="scrollspy-example">
+  <!-- YOUR WORK HERE -->
+  <main>
+    <div class="container my-5">
+      <div class="row">
+        <!-- Left column -->
+        <div class="col-md-10 mb-4 mb-md-0">
+          <!--Section: Docs content-->
+          <section>
+            <!--Section: Introduction-->
+            <section id="section-introduction">
+              <!-- Main title -->
+              <h2 class="h1 fw-bold">Login form</h2>
+
+              <!-- Seo title -->
+              <h1 class="h6">Bootstrap 5 Login form component</h1>
+
+              <div class="row">
+                <!-- Description -->
+                <p class="my-3">
+                  Responsive login form built with Bootstrap 5. Collection of examples for signup forms, full page login templates, login modals & many other sign in designs.
+                </p>
+              </div>
+            </section>
+            <!--Section: Introduction-->
+
+            <hr class="my-5" />
+
+            <!--Section: basic example-->
+            <section id="section-basic-example">
+              <!-- Section title -->
+              <h2 class="my-5 mb-2">Basic example</h2>
+
+              <!--Description-->
+              <p>
+                Typical sign in / login form with additional register buttons.
+              </p>
+
+              <!-- Section: Demo -->
+              <section class="border p-4 text-center w-100 rounded-top">
+                <div class="container d-flex flex-column w-50">
+                <form>
+                  <!-- Email input -->
+                  <div class="form-outline mb-4">
+                    <input type="email" id="form2Example1" class="form-control" />
+                    <label class="form-label" for="form2Example1">Email address</label>
+                  </div>
+                
+                  <!-- Password input -->
+                  <div class="form-outline mb-4">
+                    <input type="password" id="form2Example2" class="form-control" />
+                    <label class="form-label" for="form2Example2">Password</label>
+                  </div>
+                
+                  <!-- 2 column grid layout for inline styling -->
+                  <div class="row mb-4">
+                    <div class="col d-flex justify-content-center">
+                      <!-- Checkbox -->
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+                        <label class="form-check-label" for="form2Example31"> Remember me </label>
+                      </div>
+                    </div>
+                
+                    <div class="col">
+                      <!-- Simple link -->
+                      <a href="#!">Forgot password?</a>
+                    </div>
+                  </div>
+                
+                  <!-- Submit button -->
+                  <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
+                
+                  <!-- Register buttons -->
+                  <div class="text-center">
+                    <p>Not a member? <a href="#!">Register</a></p>
+                    <p>or sign up with:</p>
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                      <i class="fab fa-facebook-f"></i>
+                    </button>
+                
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                      <i class="fab fa-google"></i>
+                    </button>
+                
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                      <i class="fab fa-twitter"></i>
+                    </button>
+                
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                      <i class="fab fa-github"></i>
+                    </button>
+                  </div>
+                </form>
+                </div>
+
+              </section>
+
+              <div class="p-4 text-center border border-top-0 mobile-hidden rounded-bottom">
+                <a class="btn btn-link px-3 collapsed" data-mdb-toggle="collapse" href="#basic-example" role="button"
+                  aria-expanded="false" aria-controls="example9" data-ripple-color="hsl(0, 0%, 67%)">
+                  <i class="fas fa-code me-md-2"></i>
+                  <span class="d-none d-md-inline-block">
+                    Show code
+                  </span>
+                </a>
+
+                <a class="btn btn-link px-3 " data-ripple-color="hsl(0, 0%, 67%)">
+                  <i class="fas fa-file-code me-md-2 pe-none"></i>
+                  <span class="d-none d-md-inline-block export-to-snippet pe-none">
+                    Edit in sandbox
+                  </span>
+                </a>
+              </div>
+
+              <!-- Section: Demo -->
+
+              <!-- Section: Code -->
+              <section class="my-3 collapse" id="basic-example">
+
+                <mdbsnippet>
+                  <!-- HTML -->
+                  <code data-lang="js" data-name="JSX">
+                    import React from 'react';
+                    import {
+                      MDBContainer, 
+                      MDBInput, 
+                      MDBCheckbox, 
+                      MDBBtn, 
+                      MDBIcon
+                    } 
+                    from 'mdb-react-ui-kit';
+
+                    function App() {
+                      return (
+                        <MDBContainer className="p-3 my-5 d-flex flex-column w-50">
+                          
+                          <MDBInput wrapperClass='mb-4' label='Email address' id='form1' type='email'/>
+                          <MDBInput wrapperClass='mb-4' label='Password' id='form2' type='password'/>
+                          
+                          <div className="d-flex justify-content-between mx-3 mb-4">
+                            <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember me' />
+                            <a href="!#">Forgot password?</a>
+                          </div>
+                          
+                          <MDBBtn className="mb-4">Sign in</MDBBtn>
+                          
+                          <div className="text-center">
+                            <p>Not a member? <a href="#!">Register</a></p>
+                            <p>or sign up with:</p>
+                            
+                            <div className='d-flex justify-content-between mx-auto' style={{width: '40%'}}>
+                              <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
+                                <MDBIcon fab icon='facebook-f' size="sm"/>
+                              </MDBBtn>
+
+                              <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
+                                <MDBIcon fab icon='twitter' size="sm"/>
+                              </MDBBtn>
+
+                              <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
+                                <MDBIcon fab icon='google' size="sm"/>
+                              </MDBBtn>
+
+                              <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
+                                <MDBIcon fab icon='github' size="sm"/>
+                              </MDBBtn>
+                            
+                            </div>
+                          </div>
+
+                        </MDBContainer>
+                      );
+                    }
+
+                    export default App;
+
+                  </code>
+                </mdbsnippet>
+
+              </section>
+              <!-- Section: Code -->
+
+            </section>
+            <!--Section: basic example-->
+
+            <!--Section: login register example-->
+            <section id="section-login-register-example">
+              <!-- Section title -->
+              <h2 class="my-5 mb-2">Login - register</h2>
+
+              <!--Description-->
+              <p>
+                By using <a href="https://mdbootstrap.com/docs/b5/react/navigation/pills/">pills</a> you can place login and register forms in a single component.
+              </p>
+
+              <!-- Section: Demo -->
+              <section class="border p-4 text-center w-100 rounded-top">
+                <div class="container d-flex flex-column w-50">
+                  <!-- Pills navs -->
+                  <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link active" id="tab-login" data-mdb-toggle="pill" href="#pills-login" role="tab"
+                        aria-controls="pills-login" aria-selected="true">Login</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" id="tab-register" data-mdb-toggle="pill" href="#pills-register" role="tab"
+                        aria-controls="pills-register" aria-selected="false">Register</a>
+                    </li>
+                  </ul>
+                  <!-- Pills navs -->
+
+                  <!-- Pills content -->
+                  <div class="tab-content">
+                    <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+                      <form>
+                        <div class="text-center mb-3">
+                          <p>Sign in with:</p>
+                          <button type="button" class="btn btn-link btn-floating mx-1">
+                            <i class="fab fa-facebook-f"></i>
+                          </button>
+
+                          <button type="button" class="btn btn-link btn-floating mx-1">
+                            <i class="fab fa-google"></i>
+                          </button>
+
+                          <button type="button" class="btn btn-link btn-floating mx-1">
+                            <i class="fab fa-twitter"></i>
+                          </button>
+
+                          <button type="button" class="btn btn-link btn-floating mx-1">
+                            <i class="fab fa-github"></i>
+                          </button>
+                        </div>
+
+                        <p class="text-center">or:</p>
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                          <input type="email" id="loginName" class="form-control" />
+                          <label class="form-label" for="loginName">Email or username</label>
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                          <input type="password" id="loginPassword" class="form-control" />
+                          <label class="form-label" for="loginPassword">Password</label>
+                        </div>
+
+                        <!-- 2 column grid layout -->
+                        <div class="row mb-4">
+                          <div class="col-md-6 d-flex justify-content-center">
+                            <!-- Checkbox -->
+                            <div class="form-check mb-3 mb-md-0">
+                              <input class="form-check-input" type="checkbox" value="" id="loginCheck" checked />
+                              <label class="form-check-label" for="loginCheck"> Remember me </label>
+                            </div>
+                          </div>
+
+                          <div class="col-md-6 d-flex justify-content-center">
+                            <!-- Simple link -->
+                            <a href="#!">Forgot password?</a>
+                          </div>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+
+                        <!-- Register buttons -->
+                        <div class="text-center">
+                          <p>Not a member? <a href="#!">Register</a></p>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
+                      <form>
+                        <div class="text-center mb-3">
+                          <p>Sign up with:</p>
+                          <button type="button" class="btn btn-link btn-floating mx-1">
+                            <i class="fab fa-facebook-f"></i>
+                          </button>
+
+                          <button type="button" class="btn btn-link btn-floating mx-1">
+                            <i class="fab fa-google"></i>
+                          </button>
+
+                          <button type="button" class="btn btn-link btn-floating mx-1">
+                            <i class="fab fa-twitter"></i>
+                          </button>
+
+                          <button type="button" class="btn btn-link btn-floating mx-1">
+                            <i class="fab fa-github"></i>
+                          </button>
+                        </div>
+
+                        <p class="text-center">or:</p>
+
+                        <!-- Name input -->
+                        <div class="form-outline mb-4">
+                          <input type="text" id="registerName" class="form-control" />
+                          <label class="form-label" for="registerName">Name</label>
+                        </div>
+
+                        <!-- Username input -->
+                        <div class="form-outline mb-4">
+                          <input type="text" id="registerUsername" class="form-control" />
+                          <label class="form-label" for="registerUsername">Username</label>
+                        </div>
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                          <input type="email" id="registerEmail" class="form-control" />
+                          <label class="form-label" for="registerEmail">Email</label>
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                          <input type="password" id="registerPassword" class="form-control" />
+                          <label class="form-label" for="registerPassword">Password</label>
+                        </div>
+
+                        <!-- Repeat Password input -->
+                        <div class="form-outline mb-4">
+                          <input type="password" id="registerRepeatPassword" class="form-control" />
+                          <label class="form-label" for="registerRepeatPassword">Repeat password</label>
+                        </div>
+
+                        <!-- Checkbox -->
+                        <div class="form-check d-flex justify-content-center mb-4">
+                          <input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked
+                            aria-describedby="registerCheckHelpText" />
+                          <label class="form-check-label" for="registerCheck">
+                            I have read and agree to the terms
+                          </label>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary btn-block mb-3">Sign in</button>
+                      </form>
+                    </div>
+                  </div>
+                  <!-- Pills content -->
+                </div>
+              </section>
+
+              <div class="p-4 text-center border border-top-0 mobile-hidden rounded-bottom">
+                <a class="btn btn-link px-3 collapsed" data-mdb-toggle="collapse" href="#login-register-example" role="button"
+                  aria-expanded="false" aria-controls="example9" data-ripple-color="hsl(0, 0%, 67%)">
+                  <i class="fas fa-code me-md-2"></i>
+                  <span class="d-none d-md-inline-block">
+                    Show code
+                  </span>
+                </a>
+
+                <a class="btn btn-link px-3 " data-ripple-color="hsl(0, 0%, 67%)">
+                  <i class="fas fa-file-code me-md-2 pe-none"></i>
+                  <span class="d-none d-md-inline-block export-to-snippet pe-none">
+                    Edit in sandbox
+                  </span>
+                </a>
+              </div>
+
+              <!-- Section: Demo -->
+
+              <!-- Section: Code -->
+              <section class="my-3 collapse" id="login-register-example">
+
+                <mdbsnippet>
+                  <!-- HTML -->
+                  <code data-lang="js" data-name="JSX">
+                    import React, { useState } from 'react';
+                    import {
+                      MDBContainer, 
+                      MDBTabs, 
+                      MDBTabsItem, 
+                      MDBTabsLink, 
+                      MDBTabsContent, 
+                      MDBTabsPane, 
+                      MDBBtn, 
+                      MDBIcon, 
+                      MDBInput, 
+                      MDBCheckbox 
+                    } 
+                    from 'mdb-react-ui-kit';
+
+                    function App() {
+
+                      const [justifyActive, setJustifyActive] = useState('tab1');;
+
+                      const handleJustifyClick = (value) => {
+                        if (value === justifyActive) {
+                          return;
+                        }
+
+                        setJustifyActive(value);
+                      };
+
+                      return (
+                        <MDBContainer className="p-3 my-5 d-flex flex-column w-50">
+
+                          <MDBTabs pills justify className='mb-3 d-flex flex-row justify-content-between'>
+                            <MDBTabsItem>
+                              <MDBTabsLink onClick={() => handleJustifyClick('tab1')} active={justifyActive === 'tab1'}>
+                                Login
+                              </MDBTabsLink>
+                            </MDBTabsItem>
+                            <MDBTabsItem>
+                              <MDBTabsLink onClick={() => handleJustifyClick('tab2')} active={justifyActive === 'tab2'}>
+                                Register
+                              </MDBTabsLink>
+                            </MDBTabsItem>
+                          </MDBTabs>
+
+                          <MDBTabsContent>
+
+                            <MDBTabsPane show={justifyActive === 'tab1'}>
+                              
+                              <div className="text-center mb-3">
+                                <p>Sign in with:</p>
+                                
+                                <div className='d-flex justify-content-between mx-auto' style={{width: '40%'}}>
+                                  <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
+                                    <MDBIcon fab icon='facebook-f' size="sm"/>
+                                  </MDBBtn>
+
+                                  <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
+                                    <MDBIcon fab icon='twitter' size="sm"/>
+                                  </MDBBtn>
+
+                                  <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
+                                    <MDBIcon fab icon='google' size="sm"/>
+                                  </MDBBtn>
+
+                                  <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
+                                    <MDBIcon fab icon='github' size="sm"/>
+                                  </MDBBtn>
+                                </div>
+                                
+                                <p className="text-center mt-3">or:</p>
+                              </div>
+
+                              <MDBInput wrapperClass='mb-4' label='Email address' id='form1' type='email'/>
+                              <MDBInput wrapperClass='mb-4' label='Password' id='form2' type='password'/>
+
+                              <div className="d-flex justify-content-between mx-4 mb-4">
+                                <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember me' />
+                                <a href="!#">Forgot password?</a>
+                              </div>
+                              
+                              <MDBBtn className="mb-4 w-100">Sign in</MDBBtn>
+                              <p className="text-center">Not a member? <a href="#!">Register</a></p>
+                            
+                            </MDBTabsPane>
+
+                            <MDBTabsPane show={justifyActive === 'tab2'}>
+                              
+                              <div className="text-center mb-3">
+                                <p>Sign un with:</p>
+                                
+                                <div className='d-flex justify-content-between mx-auto' style={{width: '40%'}}>
+                                  <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
+                                    <MDBIcon fab icon='facebook-f' size="sm"/>
+                                  </MDBBtn>
+
+                                  <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
+                                    <MDBIcon fab icon='twitter' size="sm"/>
+                                  </MDBBtn>
+
+                                  <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
+                                    <MDBIcon fab icon='google' size="sm"/>
+                                  </MDBBtn>
+
+                                  <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
+                                    <MDBIcon fab icon='github' size="sm"/>
+                                  </MDBBtn>
+                                </div>
+                                
+                                <p className="text-center mt-3">or:</p>
+                              </div>
+
+                              <MDBInput wrapperClass='mb-4' label='Name' id='form1' type='text'/>
+                              <MDBInput wrapperClass='mb-4' label='Username' id='form1' type='text'/>
+                              <MDBInput wrapperClass='mb-4' label='Email' id='form1' type='email'/>
+                              <MDBInput wrapperClass='mb-4' label='Password' id='form1' type='password'/>
+
+                              <div className='d-flex justify-content-center mb-4'>
+                                <MDBCheckbox name='flexCheck' id='flexCheckDefault' label='I have read and agree to the terms' />
+                              </div>
+                              
+                              <MDBBtn className="mb-4 w-100">Sign up</MDBBtn>
+                            
+                            </MDBTabsPane>
+
+                          </MDBTabsContent>
+
+                        </MDBContainer>
+                      );
+                    }
+
+                    export default App;                    
+
+                  </code>
+                </mdbsnippet>
+
+              </section>
+              <!-- Section: Code -->
+
+            </section>
+            <!--Section: login register example-->
+
+            <!--Section: login page example-->
+            <section id="section-login-page-example">
+              <!-- Section title -->
+              <h2 class="my-5 mb-2">Login Page</h2>
+
+              <!--Description-->
+              <p>
+                It's a common practice to create a separate login page that takes the entire viewport. You can utilize one half of the page by placing a brand related image in it, and put your login <a href="https://mdbootstrap.com/docs/b5/react/forms/input-fields/">inputs</a> in a second column by using the <a href="https://mdbootstrap.com/docs/b5/react/layout/grid/">Bootstrap grid</a>.
+              </p>
+
+              <!-- Section: Demo -->
+
+              <style>
+                .divider:after,
+                .divider:before {
+                  content: "";
+                  flex: 1;
+                  height: 1px;
+                  background: #eee;
+                }
+                .h-custom {
+                  height: calc(100% - 73px);
+                }
+                  @media (max-width: 450px) {
+                  .h-custom {
+                  height: 100%;
+                  }
+                }
+              </style>
+
+              <section class="border p-4 text-center w-100 rounded-top">
+                  <div class="container-fluid h-custom">
+                    <div class="row d-flex justify-content-center align-items-center h-100">
+                      <div class="col-md-9 col-lg-6 col-xl-5">
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                          class="img-fluid" alt="Sample image">
+                      </div>
+                      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                        <form>
+                          <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                            <p class="lead fw-normal mb-0 me-3">Sign in with</p>
+                            <button type="button" class="btn btn-primary btn-floating mx-1">
+                              <i class="fab fa-facebook-f"></i>
+                            </button>
+                
+                            <button type="button" class="btn btn-primary btn-floating mx-1">
+                              <i class="fab fa-twitter"></i>
+                            </button>
+                
+                            <button type="button" class="btn btn-primary btn-floating mx-1">
+                              <i class="fab fa-linkedin-in"></i>
+                            </button>
+                          </div>
+                
+                          <div class="divider d-flex align-items-center my-4">
+                            <p class="text-center fw-bold mx-3 mb-0">Or</p>
+                          </div>
+                
+                          <!-- Email input -->
+                          <div class="form-outline mb-4">
+                            <input type="email" id="form3Example3" class="form-control form-control-lg"
+                              placeholder="Enter a valid email address" />
+                            <label class="form-label" for="form3Example3">Email address</label>
+                          </div>
+                
+                          <!-- Password input -->
+                          <div class="form-outline mb-3">
+                            <input type="password" id="form3Example4" class="form-control form-control-lg"
+                              placeholder="Enter password" />
+                            <label class="form-label" for="form3Example4">Password</label>
+                          </div>
+                
+                          <div class="d-flex justify-content-between align-items-center">
+                            <!-- Checkbox -->
+                            <div class="form-check mb-0">
+                              <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                              <label class="form-check-label" for="form2Example3">
+                                Remember me
+                              </label>
+                            </div>
+                            <a href="#!" class="text-body">Forgot password?</a>
+                          </div>
+                
+                          <div class="text-center text-lg-start mt-4 pt-2">
+                            <button type="button" class="btn btn-primary btn-lg"
+                              style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+                            <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
+                                class="link-danger">Register</a></p>
+                          </div>
+                
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+                    <!-- Copyright -->
+                    <div class="text-white mb-3 mb-md-0">
+                      Copyright © 2020. All rights reserved.
+                    </div>
+                    <!-- Copyright -->
+                
+                    <!-- Right -->
+                    <div>
+                      <a href="#!" class="text-white me-4">
+                        <i class="fab fa-facebook-f"></i>
+                      </a>
+                      <a href="#!" class="text-white me-4">
+                        <i class="fab fa-twitter"></i>
+                      </a>
+                      <a href="#!" class="text-white me-4">
+                        <i class="fab fa-google"></i>
+                      </a>
+                      <a href="#!" class="text-white">
+                        <i class="fab fa-linkedin-in"></i>
+                      </a>
+                    </div>
+                    <!-- Right -->
+                  </div>
+
+              </section>
+
+              <div class="p-4 text-center border border-top-0 mobile-hidden rounded-bottom">
+                <a class="btn btn-link px-3 collapsed" data-mdb-toggle="collapse" href="#login-page-example" role="button"
+                  aria-expanded="false" aria-controls="example9" data-ripple-color="hsl(0, 0%, 67%)">
+                  <i class="fas fa-code me-md-2"></i>
+                  <span class="d-none d-md-inline-block">
+                    Show code
+                  </span>
+                </a>
+
+                <a class="btn btn-link px-3 " data-ripple-color="hsl(0, 0%, 67%)">
+                  <i class="fas fa-file-code me-md-2 pe-none"></i>
+                  <span class="d-none d-md-inline-block export-to-snippet pe-none">
+                    Edit in sandbox
+                  </span>
+                </a>
+              </div>
+
+              <!-- Section: Demo -->
+
+              <!-- Section: Code -->
+              <section class="my-3 collapse" id="login-page-example">
+
+                <mdbsnippet>
+                  <!-- HTML -->
+                  <code data-lang="js" data-name="JSX">
+                    import React from 'react';
+                    import {MDBContainer, MDBCol, MDBRow, MDBBtn, MDBIcon, MDBInput, MDBCheckbox } from 'mdb-react-ui-kit';
+
+                    function App() {
+
+                      return (
+                        <MDBContainer fluid className="p-3 my-5 h-custom">
+                          
+                          <MDBRow>
+                            
+                            <MDBCol col='10' md='6'>
+                              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid" alt="Sample image" />
+                            </MDBCol>
+                            
+                            <MDBCol col='4' md='6'>
+                              
+                              <div className="d-flex flex-row align-items-center justify-content-center">
+                                
+                                <p className="lead fw-normal mb-0 me-3">Sign in with</p>
+                                
+                                <MDBBtn floating size='md' tag='a' className='me-2'>
+                                  <MDBIcon fab icon='facebook-f' />
+                                </MDBBtn>
+                                
+                                <MDBBtn floating size='md' tag='a'  className='me-2'>
+                                  <MDBIcon fab icon='twitter' />
+                                </MDBBtn>
+                                
+                                <MDBBtn floating size='md' tag='a'  className='me-2'>
+                                  <MDBIcon fab icon='linkedin-in' />
+                                </MDBBtn>
+                              
+                              </div>   
+                              
+                              <div className="divider d-flex align-items-center my-4">
+                                <p className="text-center fw-bold mx-3 mb-0">Or</p>
+                              </div>
+
+                              <MDBInput wrapperClass='mb-4' label='Email address' id='formControlLg' type='email' size="lg"/>
+                              <MDBInput wrapperClass='mb-4' label='Password' id='formControlLg' type='password' size="lg"/>
+
+                              <div className="d-flex justify-content-between mb-4">
+                                <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember me' />
+                                <a href="!#">Forgot password?</a>
+                              </div>
+                              
+                              <div className='text-center text-md-start mt-4 pt-2'>
+                                <MDBBtn className="mb-0 px-5" size='lg'>Login</MDBBtn>
+                                <p className="small fw-bold mt-2 pt-1 mb-2">Don't have an account? <a href="#!" className="link-danger">Register</a></p>
+                              </div>
+                            
+                            </MDBCol>
+                          
+                          </MDBRow>
+
+                          <div className="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+                            
+                            <div className="text-white mb-3 mb-md-0">
+                              Copyright © 2020. All rights reserved.
+                            </div>
+                            
+                            <div>
+                              
+                              <MDBBtn tag='a' color='none' className='mx-3' style={{ color: 'white' }}>
+                                <MDBIcon fab icon='facebook-f' size="md"/>
+                              </MDBBtn>
+
+                              <MDBBtn tag='a' color='none' className='mx-3' style={{ color: 'white'  }}>
+                                <MDBIcon fab icon='twitter' size="md"/>
+                              </MDBBtn>
+
+                              <MDBBtn tag='a' color='none' className='mx-3' style={{ color: 'white'  }}>
+                                <MDBIcon fab icon='google' size="md"/>
+                              </MDBBtn>
+
+                              <MDBBtn tag='a' color='none' className='mx-3' style={{ color: 'white'  }}>
+                                <MDBIcon fab icon='linkedin-in' size="md"/>
+                              </MDBBtn>
+                            
+                            </div>
+                          
+                          </div>
+
+                        </MDBContainer>
+                      );
+                    }
+
+                    export default App;
+
+
+
+                  </code>
+
+                  <code data-lang="css" data-name="CSS">
+                    .divider:after,
+                    .divider:before {
+                      content: "";
+                      flex: 1;
+                      height: 1px;
+                      background: #eee;
+                    }
+                    .h-custom {
+                      height: calc(100% - 73px);
+                    }
+                    @media (max-width: 450px) {
+                      .h-custom {
+                      height: 100%;
+                      }
+                    }
+                  </code>
+                </mdbsnippet>
+
+              </section>
+              <!-- Section: Code -->
+
+            </section>
+            <!--Section: login page example-->
+
+            <!--Section: login template example-->
+            <section id="section-login-template-example">
+              <!-- Section title -->
+              <h2 class="my-5 mb-2">Login Template</h2>
+
+              <!--Description-->
+              <p>
+                Putting your brand logo on the login page is a great practice, in addition to a logo you can also add a mission statement or other text like in the example below. If you want to create a beautiful background for your text that will match your brand colors use our <a href="https://mdbootstrap.com/docs/standard/tools/design/gradients/">gradient generator</a>.
+              </p>
+
+              <!-- Section: Demo -->
+
+              <style>
+                .gradient-custom-2 {
+                  /* fallback for old browsers */
+                  background: #fccb90;
+
+                  /* Chrome 10-25, Safari 5.1-6 */
+                  background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+
+                  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                  background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+                  }
+
+                  @media (min-width: 768px) {
+                    .gradient-form {
+                      height: 100vh !important;
+                    }
+                  }
+                  @media (min-width: 769px) {
+                    .gradient-custom-2 {
+                      border-top-right-radius: .3rem;
+                      border-bottom-right-radius: .3rem;
+                  }
+                  }
+              </style>
+
+              <section class="border p-4 w-100 rounded-top" style="background-color: #eee;">
+                
+                <div class="row d-flex justify-content-center">
+                  <div class="col-12">
+                    <div class="card rounded-3 text-black">
+                      <div class="row g-0">
+                        <div class="col-lg-6">
+                          <div class="card-body p-md-5 mx-md-4">
+          
+                            <div class="text-center">
+                              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp" style="width: 185px;" alt="logo">
+                              <h4 class="mt-1 mb-5 pb-1">We are The Lotus Team</h4>
+                            </div>
+          
+                            <form>
+                              <p>Please login to your account</p>
+          
+                              <div class="form-outline mb-4">
+                                <input type="email" id="form2Example11" class="form-control" placeholder="Phone number or email address">
+                                <label class="form-label" for="form2Example11" style="margin-left: 0px;">Username</label>
+                              <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 66.4px;"></div><div class="form-notch-trailing"></div></div></div>
+          
+                              <div class="form-outline mb-4">
+                                <input type="password" id="form2Example22" class="form-control" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAXtJREFUOBGVUj2LwkAUnIjBICIIKe8gWKRKo2BvYXMgWNlYWZ3gn1B/htekibWVcH1aIVV+wQULCxsRtMrtrGYv8RLUB8nuvjczu+9DWywWH3EcL8X3jidM07QfAfucz+ffhJdeIZNwu+iLexoFnrr5Cr/+05xSOvBoX61WYdt2BvaSgGVZ6PV6+QKGYahApVKBKJY6p2PKeduUufb7fbTbbaxWKxwOB0ynU+x2O7ium4ndk3l+KYU8AW02m8UM8Jnn81limMLlcsnDK59IMRKHiXpBQibiEZkY0co3sSxlDegoMsdx0O12Ua/XEUUR1us1jsejhFNEvaBIgK07nU4IwxDNZhOdTicDLXO205OViYrDZrORLg5Qq9VSdUpwJSEwoUjiuF+FOEzTxGAwwH6/x3a7zUD+piXjBpLukDwej2XenufJdNLQhzUYjUao1WpoNBpywIbDYZqPwi6wz6xyEATQdV2ROKmJEVMoIECszdL3ffb7n5EsnJNf8S6HAZZBgLIAAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: pointer;">
+                                <label class="form-label" for="form2Example22" style="margin-left: 0px;">Password</label>
+                              <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 64.8px;"></div><div class="form-notch-trailing"></div></div></div>
+          
+                              <div class="text-center pt-1 mb-5 pb-1">
+                                <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Log
+                                  in</button>
+                                <a class="text-muted" href="#!">Forgot password?</a>
+                              </div>
+          
+                              <div class="d-flex align-items-center justify-content-center pb-4">
+                                <p class="mb-0 me-2">Don't have an account?</p>
+                                <button type="button" class="btn btn-outline-danger">Create new</button>
+                              </div>
+          
+                            </form>
+          
+                          </div>
+                        </div>
+                        <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                          <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                            <h4 class="mb-4">We are more than just a company</h4>
+                            <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                              ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </section>
+
+              <div class="p-4 text-center border border-top-0 mobile-hidden rounded-bottom">
+                <a class="btn btn-link px-3 collapsed" data-mdb-toggle="collapse" href="#login-template-example" role="button"
+                  aria-expanded="false" aria-controls="example9" data-ripple-color="hsl(0, 0%, 67%)">
+                  <i class="fas fa-code me-md-2"></i>
+                  <span class="d-none d-md-inline-block">
+                    Show code
+                  </span>
+                </a>
+
+                <a class="btn btn-link px-3 " data-ripple-color="hsl(0, 0%, 67%)">
+                  <i class="fas fa-file-code me-md-2 pe-none"></i>
+                  <span class="d-none d-md-inline-block export-to-snippet pe-none">
+                    Edit in sandbox
+                  </span>
+                </a>
+              </div>
+
+              <!-- Section: Demo -->
+
+              <!-- Section: Code -->
+              <section class="my-3 collapse" id="login-template-example">
+
+                <mdbsnippet>
+                  <!-- HTML -->
+                  <code data-lang="js" data-name="JSX">
+                    import React from 'react';
+                    import { 
+                      MDBBtn, 
+                      MDBContainer, 
+                      MDBRow, 
+                      MDBCol, 
+                      MDBInput 
+                    } 
+                    from 'mdb-react-ui-kit';
+
+                    function App() {
+                      return (
+                        <MDBContainer className="my-5 gradient-form">
+                          
+                          <MDBRow>
+                            
+                            <MDBCol col='6' className="mb-5">
+                              <div className="d-flex flex-column ms-5">
+
+                                <div className="text-center">
+                                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+                                    style={{width: '185px'}} alt="logo" />
+                                  <h4 className="mt-1 mb-5 pb-1">We are The Lotus Team</h4>
+                                </div>
+
+                                <p>Please login to your account</p>
+
+
+                                <MDBInput wrapperClass='mb-4' label='Email address' id='form1' type='email'/>
+                                <MDBInput wrapperClass='mb-4' label='Password' id='form2' type='password'/>
+
+
+                                <div className="text-center pt-1 mb-5 pb-1">
+                                  <MDBBtn className="mb-4 w-100 gradient-custom-2">Sign in</MDBBtn>
+                                  <a className="text-muted" href="#!">Forgot password?</a>
+                                </div>
+
+                                <div className="d-flex flex-row align-items-center justify-content-center pb-4 mb-4">
+                                  <p className="mb-0">Don't have an account?</p>
+                                  <MDBBtn outline className='mx-2' color='danger'>
+                                    Danger
+                                  </MDBBtn>
+                                </div>
+
+                              </div>
+                              
+                            </MDBCol>
+                            
+                            <MDBCol col='6' className="mb-5">
+                              <div className="d-flex flex-column  justify-content-center gradient-custom-2 h-100 mb-4">
+                                
+                                <div className="text-white px-3 py-4 p-md-5 mx-md-4">
+                                  <h4 class="mb-4">We are more than just a company</h4>
+                                  <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                  </p>
+                                </div>
+                              
+                              </div>
+                            
+                            </MDBCol>
+                          
+                          </MDBRow>
+                          
+                        </MDBContainer>
+                      );
+                    }
+
+                    export default App;
+
+
+
+                  </code>
+
+                  <code data-lang="css" data-name="CSS">
+                    .divider:after,
+                    .divider:before {
+                      content: "";
+                      flex: 1;
+                      height: 1px;
+                      background: #eee;
+                    }
+                    .h-custom {
+                      height: calc(100% - 73px);
+                    }
+                    @media (max-width: 450px) {
+                      .h-custom {
+                      height: 100%;
+                      }
+                    }
+                  </code>
+                </mdbsnippet>
+
+              </section>
+              <!-- Section: Code -->
+
+            </section>
+            <!--Section: login template example-->
+
+            <!--Section: sign in form example-->
+            <section id="section-sign-in-form-example">
+              <!-- Section title -->
+              <h2 class="my-5 mb-2">Sign in form</h2>
+
+              <!--Description-->
+              <p>
+                This is another variation of a sign in form, this one puts emphasis on social account login options by making the social account buttons as wide as the main sign in button.
+              </p>
+
+              <!-- Section: Demo -->
+
+              <style>
+                .divider:after,
+                .divider:before {
+                  content: "";
+                  flex: 1;
+                  height: 1px;
+                  background: #eee;
+                }
+              </style>
+
+              <section class="border p-4 w-100 rounded-top">
+                
+                  <div class="container py-5 h-100">
+                    <div class="row d-flex align-items-center justify-content-center h-100">
+                      <div class="col-md-8 col-lg-7 col-xl-6">
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+                          class="img-fluid" alt="Phone image">
+                      </div>
+                      <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+                        <form>
+                          <!-- Email input -->
+                          <div class="form-outline mb-4">
+                            <input type="email" id="form1Example13" class="form-control form-control-lg" />
+                            <label class="form-label" for="form1Example13">Email address</label>
+                          </div>
+                
+                          <!-- Password input -->
+                          <div class="form-outline mb-4">
+                            <input type="password" id="form1Example23" class="form-control form-control-lg" />
+                            <label class="form-label" for="form1Example23">Password</label>
+                          </div>
+                
+                          <div class="d-flex justify-content-around align-items-center mb-4">
+                            <!-- Checkbox -->
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+                              <label class="form-check-label" for="form1Example3"> Remember me </label>
+                            </div>
+                            <a href="#!">Forgot password?</a>
+                          </div>
+                
+                          <!-- Submit button -->
+                          <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+                
+                          <div class="divider d-flex align-items-center my-4">
+                            <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+                          </div>
+                
+                          <a class="btn btn-primary btn-lg btn-block" style="background-color: #3b5998" href="#!"
+                            role="button">
+                            <i class="fab fa-facebook-f me-2"></i>Continue with Facebook
+                          </a>
+                          <a class="btn btn-primary btn-lg btn-block" style="background-color: #55acee" href="#!"
+                            role="button">
+                            <i class="fab fa-twitter me-2"></i>Continue with Twitter</a>
+                
+                        </form>
+                      </div>
+                    </div>
+
+              </section>
+
+              <div class="p-4 text-center border border-top-0 mobile-hidden rounded-bottom">
+                <a class="btn btn-link px-3 collapsed" data-mdb-toggle="collapse" href="#sign-in-form-example" role="button"
+                  aria-expanded="false" aria-controls="example9" data-ripple-color="hsl(0, 0%, 67%)">
+                  <i class="fas fa-code me-md-2"></i>
+                  <span class="d-none d-md-inline-block">
+                    Show code
+                  </span>
+                </a>
+
+                <a class="btn btn-link px-3 " data-ripple-color="hsl(0, 0%, 67%)">
+                  <i class="fas fa-file-code me-md-2 pe-none"></i>
+                  <span class="d-none d-md-inline-block export-to-snippet pe-none">
+                    Edit in sandbox
+                  </span>
+                </a>
+              </div>
+
+              <!-- Section: Demo -->
+
+              <!-- Section: Code -->
+              <section class="my-3 collapse" id="sign-in-form-example">
+
+                <mdbsnippet>
+                  <!-- HTML -->
+                  <code data-lang="js" data-name="JSX">
+                    import React from 'react';
+                    import { 
+                      MDBContainer, 
+                      MDBCol, 
+                      MDBRow, 
+                      MDBBtn, 
+                      MDBIcon, 
+                      MDBInput, 
+                      MDBCheckbox 
+                    } 
+                    from 'mdb-react-ui-kit';
+
+                    function App() {
+                      return (
+                        <MDBContainer fluid className="p-3 my-5">
+
+                          <MDBRow>
+
+                            <MDBCol col='10' md='6'>
+                              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" class="img-fluid" alt="Phone image" />
+                            </MDBCol>
+
+                            <MDBCol col='4' md='6'>
+
+
+                              <MDBInput wrapperClass='mb-4' label='Email address' id='formControlLg' type='email' size="lg"/>
+                              <MDBInput wrapperClass='mb-4' label='Password' id='formControlLg' type='password' size="lg"/>
+
+
+                              <div className="d-flex justify-content-between mx-4 mb-4">
+                                <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember me' />
+                                <a href="!#">Forgot password?</a>
+                              </div>
+
+                              <MDBBtn className="mb-4 w-100" size="lg">Sign in</MDBBtn>
+                              
+                              <div className="divider d-flex align-items-center my-4">
+                                <p className="text-center fw-bold mx-3 mb-0">OR</p>
+                              </div>
+
+                              <MDBBtn className="mb-4 w-100" size="lg" style={{backgroundColor: '#3b5998'}}>
+                                <MDBIcon fab icon="facebook-f" className="mx-2"/> 
+                                Continue with facebook
+                              </MDBBtn>
+
+                              <MDBBtn className="mb-4 w-100" size="lg" style={{backgroundColor: '#55acee'}}>
+                                <MDBIcon fab icon="twitter" className="mx-2"/> 
+                                Continue with twitter
+                              </MDBBtn>
+
+                            </MDBCol>
+
+                          </MDBRow>
+
+                        </MDBContainer>
+                      );
+                    }
+
+                    export default App;
+
+
+                  </code>
+
+                  <code data-lang="css" data-name="CSS">
+                    .divider:after,
+                    .divider:before {
+                      content: "";
+                      flex: 1;
+                      height: 1px;
+                      background: #eee;
+                    }
+
+                  </code>
+                </mdbsnippet>
+
+              </section>
+              <!-- Section: Code -->
+
+            </section>
+            <!--Section: sign in example-->
+
+            <!--Section: login card example-->
+            <section id="section-login-card-example">
+              <!-- Section title -->
+              <h2 class="my-5 mb-2">Login Card</h2>
+
+              <!--Description-->
+              <p>
+                You can use the card component to make your sign in <a href="https://mdbootstrap.com/docs/b5/react/components/cards/">card</a> stand out with a subtle shadow and rounded corners.
+              </p>
+
+              <!-- Section: Demo -->
+              <section class="border p-4 w-100 rounded-top" style="background-color: #9A616D">
+                
+                <div class="container py-3 h-100">
+                  <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col">
+                      <div class="card" style="border-radius: 1rem;">
+                        <div class="row g-0">
+                          <div class="col-md-6 col-lg-6 d-none d-md-block">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp"
+                              alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+                          </div>
+                          <div class="col-md-6 col-lg-6 d-flex align-items-center">
+                            <div class="card-body p-4 p-lg-5 text-black">
+              
+                              <form>
+              
+                                <div class="d-flex align-items-center mb-3 pb-1">
+                                  <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                                  <span class="h1 fw-bold mb-0">Logo</span>
+                                </div>
+              
+                                <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+              
+                                <div class="form-outline mb-4">
+                                  <input type="email" id="form2Example17" class="form-control form-control-lg" />
+                                  <label class="form-label" for="form2Example17">Email address</label>
+                                </div>
+              
+                                <div class="form-outline mb-4">
+                                  <input type="password" id="form2Example27" class="form-control form-control-lg" />
+                                  <label class="form-label" for="form2Example27">Password</label>
+                                </div>
+              
+                                <div class="pt-1 mb-4">
+                                  <button class="btn btn-dark btn-lg btn-block" type="button">Login</button>
+                                </div>
+              
+                                <a class="small text-muted" href="#!">Forgot password?</a>
+                                <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="#!"
+                                    style="color: #393f81;">Register here</a></p>
+                                <a href="#!" class="small text-muted">Terms of use.</a>
+                                <a href="#!" class="small text-muted">Privacy policy</a>
+                              </form>
+              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </section>
+
+              <div class="p-4 text-center border border-top-0 mobile-hidden rounded-bottom">
+                <a class="btn btn-link px-3 collapsed" data-mdb-toggle="collapse" href="#login-card-example" role="button"
+                  aria-expanded="false" aria-controls="example9" data-ripple-color="hsl(0, 0%, 67%)">
+                  <i class="fas fa-code me-md-2"></i>
+                  <span class="d-none d-md-inline-block">
+                    Show code
+                  </span>
+                </a>
+
+                <a class="btn btn-link px-3 " data-ripple-color="hsl(0, 0%, 67%)">
+                  <i class="fas fa-file-code me-md-2 pe-none"></i>
+                  <span class="d-none d-md-inline-block export-to-snippet pe-none">
+                    Edit in sandbox
+                  </span>
+                </a>
+              </div>
+
+              <!-- Section: Demo -->
+
+              <!-- Section: Code -->
+              <section class="my-3 collapse" id="login-card-example">
+
+                <mdbsnippet>
+                  <!-- HTML -->
+                  <code data-lang="js" data-name="JSX">
+                    import React from 'react';
+                    import { 
+                      MDBBtn, 
+                      MDBContainer,  
+                      MDBCard, 
+                      MDBCardBody, 
+                      MDBCardImage, 
+                      MDBRow, 
+                      MDBCol, 
+                      MDBIcon, 
+                      MDBInput 
+                    } 
+                    from 'mdb-react-ui-kit';
+
+                    function App() {
+                      return (
+                        <MDBContainer className="my-5">
+                          
+                          <MDBCard>
+                            <MDBRow className='g-0'>
+                              
+                              <MDBCol md='6'>
+                                <MDBCardImage src='https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp' alt="login form" className='rounded-start w-100'/>
+                              </MDBCol>
+                              
+                              <MDBCol md='6'>
+                                <MDBCardBody className='d-flex flex-column'>
+                                  
+                                  <div className='d-flex flex-row mt-2'>
+                                    <MDBIcon fas icon="cubes fa-3x me-3" style={{ color: '#ff6219' }}/>
+                                    <span className="h1 fw-bold mb-0">Logo</span>
+                                  </div>
+                                  
+                                  <h5 className="fw-normal my-4 pb-3" style={{letterSpacing: '1px'}}>Sign into your account</h5>
+                                              
+                                    <MDBInput wrapperClass='mb-4' label='Email address' id='formControlLg' type='email' size="lg"/>                                    
+                                    <MDBInput wrapperClass='mb-4' label='Password' id='formControlLg' type='password' size="lg"/>
+                                            
+                                  <MDBBtn className="mb-4 px-5" color='dark' size='lg'>Login</MDBBtn>
+                                  <a className="small text-muted" href="#!">Forgot password?</a>
+                                  <p className="mb-5 pb-lg-2" style={{color: '#393f81'}}>Don't have an account? <a href="#!" style={{color: '#393f81'}}>Register here</a></p>
+                                  
+                                  <div className='d-flex flex-row justify-content-start'>
+                                    <a href="#!" className="small text-muted me-1">Terms of use.</a>
+                                    <a href="#!" className="small text-muted">Privacy policy</a>
+                                  </div>
+                                
+                                </MDBCardBody>
+                              </MDBCol>
+                            
+                            </MDBRow>
+                          </MDBCard>
+                          
+                        </MDBContainer>
+                      );
+                    }
+
+                    export default App;
+
+                  </code>
+
+                  <code data-lang="css" data-name="CSS">
+                    body {
+                      background-color: #9A616D;
+                    }
+                  </code>
+
+                </mdbsnippet>
+
+              </section>
+              <!-- Section: Code -->
+
+            </section>
+            <!--Section: login card example-->
+
+            <!--Section: login screen example-->
+            <section id="section-login-screen-example">
+              <!-- Section title -->
+              <h2 class="my-5 mb-2">Login Screen</h2>
+
+              <!--Description-->
+              <p>
+                Full-screen login pages work well with high resolution <a href="https://mdbootstrap.com/docs/b5/react/content-styles/images/">images</a> and simplistic <a href="https://mdbootstrap.com/docs/b5/react/forms/input-fields/">input fields</a>.
+              </p>
+
+              <!-- Section: Demo -->
+              <section class="border pe-3 w-100 rounded-top">
+
+                <style>
+                  @media (min-width: 1025px) {
+                    .h-custom-2 {
+                      height: 100%;
+                      }
+                    }
+                </style>
+                
+                <div class="row">
+                  <div class="col-sm-6 text-black">
+
+                    <div class="px-5 ms-xl-4">
+                      <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
+                      <span class="h1 fw-bold mb-0">Logo</span>
+                    </div>
+
+                    <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+
+                      <form style="width: 23rem;">
+
+                        <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
+
+                        <div class="form-outline mb-4">
+                          <input type="email" id="form2Example18" class="form-control form-control-lg">
+                          <label class="form-label" for="form2Example18" style="margin-left: 0px;">Email address</label>
+                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 88.8px;"></div><div class="form-notch-trailing"></div></div></div>
+
+                        <div class="form-outline mb-4">
+                          <input type="password" id="form2Example28" class="form-control form-control-lg" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAXtJREFUOBGVUj2LwkAUnIjBICIIKe8gWKRKo2BvYXMgWNlYWZ3gn1B/htekibWVcH1aIVV+wQULCxsRtMrtrGYv8RLUB8nuvjczu+9DWywWH3EcL8X3jidM07QfAfucz+ffhJdeIZNwu+iLexoFnrr5Cr/+05xSOvBoX61WYdt2BvaSgGVZ6PV6+QKGYahApVKBKJY6p2PKeduUufb7fbTbbaxWKxwOB0ynU+x2O7ium4ndk3l+KYU8AW02m8UM8Jnn81limMLlcsnDK59IMRKHiXpBQibiEZkY0co3sSxlDegoMsdx0O12Ua/XEUUR1us1jsejhFNEvaBIgK07nU4IwxDNZhOdTicDLXO205OViYrDZrORLg5Qq9VSdUpwJSEwoUjiuF+FOEzTxGAwwH6/x3a7zUD+piXjBpLukDwej2XenufJdNLQhzUYjUao1WpoNBpywIbDYZqPwi6wz6xyEATQdV2ROKmJEVMoIECszdL3ffb7n5EsnJNf8S6HAZZBgLIAAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+                          <label class="form-label" for="form2Example28" style="margin-left: 0px;">Password</label>
+                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 64.8px;"></div><div class="form-notch-trailing"></div></div></div>
+
+                        <div class="pt-1 mb-4">
+                          <button class="btn btn-info btn-lg btn-block" type="button">Login</button>
+                        </div>
+
+                        <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
+                        <p>Don't have an account? <a href="#!" class="link-info">Register here</a></p>
+
+                      </form>
+
+                    </div>
+
+                  </div>
+                  <div class="col-sm-6 px-0 d-none d-sm-block ">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img3.webp" alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
+                  </div>
+                </div>
+
+              </section>
+
+              <div class="p-4 text-center border border-top-0 mobile-hidden rounded-bottom">
+                <a class="btn btn-link px-3 collapsed" data-mdb-toggle="collapse" href="#login-screen-example" role="button"
+                  aria-expanded="false" aria-controls="example9" data-ripple-color="hsl(0, 0%, 67%)">
+                  <i class="fas fa-code me-md-2"></i>
+                  <span class="d-none d-md-inline-block">
+                    Show code
+                  </span>
+                </a>
+
+                <a class="btn btn-link px-3 " data-ripple-color="hsl(0, 0%, 67%)">
+                  <i class="fas fa-file-code me-md-2 pe-none"></i>
+                  <span class="d-none d-md-inline-block export-to-snippet pe-none">
+                    Edit in sandbox
+                  </span>
+                </a>
+              </div>
+
+              <!-- Section: Demo -->
+
+              <!-- Section: Code -->
+              <section class="my-3 collapse" id="login-screen-example">
+
+                <mdbsnippet>
+                  <!-- HTML -->
+                  <code data-lang="js" data-name="JSX">
+                    import React from 'react';
+                    import { 
+                      MDBBtn, 
+                      MDBContainer, 
+                      MDBRow, 
+                      MDBCol, 
+                      MDBIcon, 
+                      MDBInput 
+                    } 
+                    from 'mdb-react-ui-kit';
+
+                    function App() {
+                      return (
+                        <MDBContainer fluid>
+                          <MDBRow>
+
+                            <MDBCol sm='6'>
+
+                              <div className='d-flex flex-row ps-5 pt-5'>
+                                <MDBIcon fas icon="crow fa-3x me-3" style={{ color: '#709085' }}/>
+                                <span className="h1 fw-bold mb-0">Logo</span>
+                              </div>
+
+                              <div className='d-flex flex-column justify-content-center h-custom-2 w-75 pt-4'>
+
+                                <h3 className="fw-normal mb-3 ps-5 pb-3" style={{letterSpacing: '1px'}}>Log in</h3>
+
+                                <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Email address' id='formControlLg' type='email' size="lg"/>
+                                <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Password' id='formControlLg' type='password' size="lg"/>
+
+                                <MDBBtn className="mb-4 px-5 mx-5 w-100" color='info' size='lg'>Login</MDBBtn>
+                                <p className="small mb-5 pb-lg-3 ms-5"><a class="text-muted" href="#!">Forgot password?</a></p>
+                                <p className='ms-5'>Don't have an account? <a href="#!" class="link-info">Register here</a></p>
+
+                              </div>
+
+                            </MDBCol>
+
+                            <MDBCol sm='6' className='d-none d-sm-block px-0'>
+                              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img3.webp"
+                                alt="Login image" className="w-100" style={{objectFit: 'cover', objectPosition: 'left'}} />
+                            </MDBCol>
+
+                          </MDBRow>
+
+                        </MDBContainer>
+                      );
+                    }
+
+                    export default App;
+
+
+                  </code>
+
+                  <code data-lang="css" data-name="CSS">
+                    @media (min-width: 1025px) {
+                      .h-custom-2 {
+                        height: 100%;
+                        }
+                      }
+                  </code>
+
+                </mdbsnippet>
+
+              </section>
+              <!-- Section: Code -->
+
+            </section>
+            <!--Section: login screen example-->
+
+            <!--Section: login modal example-->
+            <section id="section-login-modal-example">
+              <!-- Section title -->
+              <h2 class="my-5 mb-2">Login Modal</h2>
+
+              <!--Description-->
+              <p>
+                This example of a login card would work great as a <a href='https://mdbootstrap.com/docs/b5/react/components/modal/'>popup</a> on lighter backgrounds. 
+              </p>
+
+              <!-- Section: Demo -->
+              <section class="border w-100 rounded-top gradient-custom">
+
+                <style>
+                  .gradient-custom {
+                    /* fallback for old browsers */
+                    background: #6a11cb;
+
+                    /* Chrome 10-25, Safari 5.1-6 */
+                    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+
+                    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+                  }
+                </style>
+                
+                <div class="row d-flex justify-content-center py-5">
+                  <div class="col-12 col-md-8 col-lg-6 col-xl-6">
+                    <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                      <div class="card-body p-5 text-center">
+          
+                        <div class="mb-md-5 mt-md-4 pb-5">
+          
+                          <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+                          <p class="text-white-50 mb-5">Please enter your login and password!</p>
+          
+                          <div class="form-outline form-white mb-4">
+                            <input type="email" id="typeEmailX" class="form-control form-control-lg">
+                            <label class="form-label" for="typeEmailX" style="margin-left: 0px;">Email</label>
+                          <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 40px;"></div><div class="form-notch-trailing"></div></div></div>
+          
+                          <div class="form-outline form-white mb-4">
+                            <input type="password" id="typePasswordX" class="form-control form-control-lg" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAXtJREFUOBGVUj2LwkAUnIjBICIIKe8gWKRKo2BvYXMgWNlYWZ3gn1B/htekibWVcH1aIVV+wQULCxsRtMrtrGYv8RLUB8nuvjczu+9DWywWH3EcL8X3jidM07QfAfucz+ffhJdeIZNwu+iLexoFnrr5Cr/+05xSOvBoX61WYdt2BvaSgGVZ6PV6+QKGYahApVKBKJY6p2PKeduUufb7fbTbbaxWKxwOB0ynU+x2O7ium4ndk3l+KYU8AW02m8UM8Jnn81limMLlcsnDK59IMRKHiXpBQibiEZkY0co3sSxlDegoMsdx0O12Ua/XEUUR1us1jsejhFNEvaBIgK07nU4IwxDNZhOdTicDLXO205OViYrDZrORLg5Qq9VSdUpwJSEwoUjiuF+FOEzTxGAwwH6/x3a7zUD+piXjBpLukDwej2XenufJdNLQhzUYjUao1WpoNBpywIbDYZqPwi6wz6xyEATQdV2ROKmJEVMoIECszdL3ffb7n5EsnJNf8S6HAZZBgLIAAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: pointer;">
+                            <label class="form-label" for="typePasswordX" style="margin-left: 0px;">Password</label>
+                          <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 64.8px;"></div><div class="form-notch-trailing"></div></div></div>
+          
+                          <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
+          
+                          <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+          
+                          <div class="d-flex justify-content-center text-center mt-4 pt-1">
+                            <a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+                            <a href="#!" class="text-white"><i class="fab fa-twitter fa-lg mx-4 px-2"></i></a>
+                            <a href="#!" class="text-white"><i class="fab fa-google fa-lg"></i></a>
+                          </div>
+          
+                        </div>
+          
+                        <div>
+                          <p class="mb-0">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Sign Up</a></p>
+                        </div>
+          
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </section>
+
+              <div class="p-4 text-center border border-top-0 mobile-hidden rounded-bottom">
+                <a class="btn btn-link px-3 collapsed" data-mdb-toggle="collapse" href="#login-modal-example" role="button"
+                  aria-expanded="false" aria-controls="example9" data-ripple-color="hsl(0, 0%, 67%)">
+                  <i class="fas fa-code me-md-2"></i>
+                  <span class="d-none d-md-inline-block">
+                    Show code
+                  </span>
+                </a>
+
+                <a class="btn btn-link px-3 " data-ripple-color="hsl(0, 0%, 67%)">
+                  <i class="fas fa-file-code me-md-2 pe-none"></i>
+                  <span class="d-none d-md-inline-block export-to-snippet pe-none">
+                    Edit in sandbox
+                  </span>
+                </a>
+              </div>
+
+              <!-- Section: Demo -->
+
+              <!-- Section: Code -->
+              <section class="my-3 collapse" id="login-modal-example">
+
+                <mdbsnippet>
+                  <!-- HTML -->
+                  <code data-lang="js" data-name="JSX">
+                    import React from 'react';
+                    import { 
+                      MDBBtn, 
+                      MDBContainer, 
+                      MDBRow, 
+                      MDBCol, 
+                      MDBCard, 
+                      MDBCardBody, 
+                      MDBInput, 
+                      MDBIcon 
+                    } 
+                    from 'mdb-react-ui-kit';
+
+                    function App() {
+                      return (
+                        <MDBContainer fluid>
+
+                          <MDBRow className='d-flex justify-content-center align-items-center h-100'>
+                            <MDBCol col='12'>
+
+                              <MDBCard className='bg-dark text-white my-5 mx-auto' style={{borderRadius: '1rem', maxWidth: '400px'}}>
+                                <MDBCardBody className='p-5 d-flex flex-column align-items-center mx-auto w-100'>
+
+                                  <h2 className="fw-bold mb-2 text-uppercase">Login</h2>
+                                  <p className="text-white-50 mb-5">Please enter your login and password!</p>
+
+                                  <MDBInput wrapperClass='mb-4 mx-5 w-100' labelClass='text-white' label='Email address' id='formControlLg' type='email' size="lg"/>
+                                  <MDBInput wrapperClass='mb-4 mx-5 w-100' labelClass='text-white' label='Password' id='formControlLg' type='password' size="lg"/>
+
+                                  <p className="small mb-3 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
+                                  <MDBBtn outline className='mx-2 px-5' color='white' size='lg'>
+                                    Login
+                                  </MDBBtn>
+
+                                  <div className='d-flex flex-row mt-3 mb-5'>
+                                    <MDBBtn tag='a' color='none' className='m-3' style={{ color: 'white' }}>
+                                      <MDBIcon fab icon='facebook-f' size="lg"/>
+                                    </MDBBtn>
+
+                                    <MDBBtn tag='a' color='none' className='m-3' style={{ color: 'white' }}>
+                                      <MDBIcon fab icon='twitter' size="lg"/>
+                                    </MDBBtn>
+
+                                    <MDBBtn tag='a' color='none' className='m-3' style={{ color: 'white' }}>
+                                      <MDBIcon fab icon='google' size="lg"/>
+                                    </MDBBtn>
+                                  </div>
+
+                                  <div>
+                                    <p className="mb-0">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Sign Up</a></p>
+
+                                  </div>
+                                </MDBCardBody>
+                              </MDBCard>
+
+                            </MDBCol>
+                          </MDBRow>
+
+                        </MDBContainer>
+                      );
+                    }
+
+                    export default App;
+
+
+
+
+                  </code>
+
+                  <code data-lang="css" data-name="CSS">
+                    body {
+                      /* fallback for old browsers */
+                      background: #6a11cb;
+  
+                      /* Chrome 10-25, Safari 5.1-6 */
+                      background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+  
+                      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                      background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+                    }
+                  </code>
+
+                </mdbsnippet>
+
+              </section>
+              <!-- Section: Code -->
+
+            </section>
+            <!--Section: login modal example-->
+
+            <!--Section: login popup example-->
+            <section id="section-login-popup-example">
+              <!-- Section title -->
+              <h2 class="my-5 mb-2">Login Popup</h2>
+
+              <!--Description-->
+              <p>
+                This example of a login card would work great as a <a href='https://mdbootstrap.com/docs/b5/react/components/modal/'>popup</a> on darker backgrounds.
+              </p>
+
+              <!-- Section: Demo -->
+              <section class="border w-100 rounded-top" style="background-color: #508bfc;">
+              
+                  <div class="container py-5 h-100">
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-12 col-md-8 col-lg-6 col-xl-6">
+                        <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                          <div class="card-body p-5 text-center">
+                
+                            <h3 class="mb-5">Sign in</h3>
+                
+                            <div class="form-outline mb-4">
+                              <input type="email" id="typeEmailX-2" class="form-control form-control-lg" />
+                              <label class="form-label" for="typeEmailX-2">Email</label>
+                            </div>
+                
+                            <div class="form-outline mb-4">
+                              <input type="password" id="typePasswordX-2" class="form-control form-control-lg" />
+                              <label class="form-label" for="typePasswordX-2">Password</label>
+                            </div>
+                
+                            <!-- Checkbox -->
+                            <div class="form-check d-flex justify-content-start mb-4">
+                              <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
+                              <label class="form-check-label" for="form1Example3"> Remember password </label>
+                            </div>
+                
+                            <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+                
+                            <hr class="my-4">
+                
+                            <button class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;"
+                              type="submit"><i class="fab fa-google me-2"></i> Sign in with google</button>
+                            <button class="btn btn-lg btn-block btn-primary mb-2" style="background-color: #3b5998;"
+                              type="submit"><i class="fab fa-facebook-f me-2"></i>Sign in with facebook</button>
+                
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+              </section>
+
+              <div class="p-4 text-center border border-top-0 mobile-hidden rounded-bottom">
+                <a class="btn btn-link px-3 collapsed" data-mdb-toggle="collapse" href="#login-popup-example" role="button"
+                  aria-expanded="false" aria-controls="example9" data-ripple-color="hsl(0, 0%, 67%)">
+                  <i class="fas fa-code me-md-2"></i>
+                  <span class="d-none d-md-inline-block">
+                    Show code
+                  </span>
+                </a>
+
+                <a class="btn btn-link px-3 " data-ripple-color="hsl(0, 0%, 67%)">
+                  <i class="fas fa-file-code me-md-2 pe-none"></i>
+                  <span class="d-none d-md-inline-block export-to-snippet pe-none">
+                    Edit in sandbox
+                  </span>
+                </a>
+              </div>
+
+              <!-- Section: Demo -->
+
+              <!-- Section: Code -->
+              <section class="my-3 collapse" id="login-popup-example">
+
+                <mdbsnippet>
+                  <!-- HTML -->
+                  <code data-lang="js" data-name="JSX">
+                    import React from 'react';
+                    import { 
+                      MDBBtn, 
+                      MDBContainer, 
+                      MDBRow, 
+                      MDBCol, 
+                      MDBCard, 
+                      MDBCardBody, 
+                      MDBInput, 
+                      MDBIcon, 
+                      MDBCheckbox 
+                    } 
+                    from 'mdb-react-ui-kit';
+
+                    function App() {
+                      return (
+                        <MDBContainer fluid>
+
+                          <MDBRow className='d-flex justify-content-center align-items-center h-100'>
+                            <MDBCol col='12'>
+
+                              <MDBCard className='bg-white my-5 mx-auto' style={{borderRadius: '1rem', maxWidth: '500px'}}>
+                                <MDBCardBody className='p-5 w-100 d-flex flex-column'>
+
+                                  <h2 className="fw-bold mb-2 text-center">Sign in</h2>
+                                  <p className="text-white-50 mb-3">Please enter your login and password!</p>
+
+                                  <MDBInput wrapperClass='mb-4 w-100' label='Email address' id='formControlLg' type='email' size="lg"/>
+                                  <MDBInput wrapperClass='mb-4 w-100' label='Password' id='formControlLg' type='password' size="lg"/>
+
+                                  <MDBCheckbox name='flexCheck' id='flexCheckDefault' className='mb-4' label='Remember password' />
+
+                                  <MDBBtn size='lg'>
+                                    Login
+                                  </MDBBtn>
+
+                                  <hr className="my-4" />
+
+                                  <MDBBtn className="mb-2 w-100" size="lg" style={{backgroundColor: '#dd4b39'}}>
+                                    <MDBIcon fab icon="google" className="mx-2"/> 
+                                    Sign in with google
+                                  </MDBBtn>
+
+                                  <MDBBtn className="mb-4 w-100" size="lg" style={{backgroundColor: '#3b5998'}}>
+                                    <MDBIcon fab icon="facebook-f" className="mx-2"/> 
+                                    Sign in with facebook
+                                  </MDBBtn>
+
+                                </MDBCardBody>
+                              </MDBCard>
+
+                            </MDBCol>
+                          </MDBRow>
+
+                        </MDBContainer>
+                      );
+                    }
+
+                    export default App;
+
+                  </code>
+
+                  <code data-lang="css" data-name="CSS">
+                    body {
+                      background-color: #508bfc;
+                    }
+                  </code>
+
+                </mdbsnippet>
+
+              </section>
+              <!-- Section: Code -->
+
+            </section>
+            <!--Section: login popup example-->
+
+            <!--Section: sign up page example-->
+            <section id="section-sign-up-page-example">
+              <!-- Section title -->
+              <h2 class="my-5 mb-2">Sign up page</h2>
+
+              <!--Description-->
+              <p>
+                A <a href='#section-sign-up-page-example'>sign up page</a> is different than a <a href='#section-login-page-example'>login page</a> because it is used to create a new account, not to sign the user into an existing account.
+              </p>
+              <p>
+                You should consider adding more input fields to your registration pages. The example below uses additional inputs for first and last name. Other commonly used inputs are address forms, credit card and payment related inputs or even different varieties of survey forms in case you need to gather more data during registration.
+              </p>
+
+              <!-- Section: Demo -->
+              <section class="border w-100 rounded-top">
+              
+                <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+                  <div class="container">
+                    <div class="row gx-lg-5 align-items-center">
+                      <div class="col-lg-6 mb-5 mb-lg-0">
+                        <h1 class="my-5 display-3 fw-bold ls-tight">
+                          The best offer <br />
+                          <span class="text-primary">for your business</span>
+                        </h1>
+                        <p style="color: hsl(217, 10%, 50.8%)">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                          Eveniet, itaque accusantium odio, soluta, corrupti aliquam
+                          quibusdam tempora at cupiditate quis eum maiores libero
+                          veritatis? Dicta facilis sint aliquid ipsum atque?
+                        </p>
+                      </div>
+              
+                      <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="card">
+                          <div class="card-body py-5 px-md-5">
+                            <form>
+                              <!-- 2 column grid layout with text inputs for the first and last names -->
+                              <div class="row">
+                                <div class="col-md-6 mb-4">
+                                  <div class="form-outline">
+                                    <input type="text" id="form3Example1" class="form-control" />
+                                    <label class="form-label" for="form3Example1">First name</label>
+                                  </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                  <div class="form-outline">
+                                    <input type="text" id="form3Example2" class="form-control" />
+                                    <label class="form-label" for="form3Example2">Last name</label>
+                                  </div>
+                                </div>
+                              </div>
+              
+                              <!-- Email input -->
+                              <div class="form-outline mb-4">
+                                <input type="email" id="form3Example3" class="form-control" />
+                                <label class="form-label" for="form3Example3">Email address</label>
+                              </div>
+              
+                              <!-- Password input -->
+                              <div class="form-outline mb-4">
+                                <input type="password" id="form3Example4" class="form-control" />
+                                <label class="form-label" for="form3Example4">Password</label>
+                              </div>
+              
+                              <!-- Checkbox -->
+                              <div class="form-check d-flex justify-content-center mb-4">
+                                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                                <label class="form-check-label" for="form2Example33">
+                                  Subscribe to our newsletter
+                                </label>
+                              </div>
+              
+                              <!-- Submit button -->
+                              <button type="submit" class="btn btn-primary btn-block mb-4">
+                                Sign up
+                              </button>
+              
+                              <!-- Register buttons -->
+                              <div class="text-center">
+                                <p>or sign up with:</p>
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                  <i class="fab fa-facebook-f"></i>
+                                </button>
+              
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                  <i class="fab fa-google"></i>
+                                </button>
+              
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                  <i class="fab fa-twitter"></i>
+                                </button>
+              
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                  <i class="fab fa-github"></i>
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </section>
+
+              <div class="p-4 text-center border border-top-0 mobile-hidden rounded-bottom">
+                <a class="btn btn-link px-3 collapsed" data-mdb-toggle="collapse" href="#sign-up-page-example" role="button"
+                  aria-expanded="false" aria-controls="example9" data-ripple-color="hsl(0, 0%, 67%)">
+                  <i class="fas fa-code me-md-2"></i>
+                  <span class="d-none d-md-inline-block">
+                    Show code
+                  </span>
+                </a>
+
+                <a class="btn btn-link px-3 " data-ripple-color="hsl(0, 0%, 67%)">
+                  <i class="fas fa-file-code me-md-2 pe-none"></i>
+                  <span class="d-none d-md-inline-block export-to-snippet pe-none">
+                    Edit in sandbox
+                  </span>
+                </a>
+              </div>
+
+              <!-- Section: Demo -->
+
+              <!-- Section: Code -->
+              <section class="my-3 collapse" id="sign-up-page-example">
+
+                <mdbsnippet>
+                  <!-- HTML -->
+                  <code data-lang="js" data-name="JSX">
+                    import React from 'react';
+                    import { 
+                      MDBBtn, 
+                      MDBContainer, 
+                      MDBRow, 
+                      MDBCol, 
+                      MDBCard, 
+                      MDBCardBody, 
+                      MDBInput, 
+                      MDBCheckbox, 
+                      MDBIcon 
+                    } 
+                    from 'mdb-react-ui-kit';
+                    
+                    function App() {
+                      return (
+                        <MDBContainer fluid className='p-4'>
+                          
+                          <MDBRow>
+                            
+                            <MDBCol md='6' className='text-center text-md-start d-flex flex-column justify-content-center'>
+                              
+                              <h1 className="my-5 display-3 fw-bold ls-tight px-3">
+                                The best offer <br />
+                                <span className="text-primary">for your business</span>
+                              </h1>
+                              
+                              <p className='px-3' style={{color: 'hsl(217, 10%, 50.8%)'}}>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Eveniet, itaque accusantium odio, soluta, corrupti aliquam
+                                quibusdam tempora at cupiditate quis eum maiores libero
+                                veritatis? Dicta facilis sint aliquid ipsum atque?
+                              </p>
+                            
+                            </MDBCol>
+                            
+                            <MDBCol md='6'>
+                              
+                              <MDBCard className='my-5'>
+                                <MDBCardBody className='p-5'>
+                                  
+                                  <MDBRow>               
+                                    <MDBCol col='6'>
+                                      <MDBInput wrapperClass='mb-4' label='First name' id='form1' type='text'/>
+                                    </MDBCol>
+                                    
+                                    <MDBCol col='6'>
+                                      <MDBInput wrapperClass='mb-4' label='Last name' id='form1' type='text'/>
+                                    </MDBCol>
+                                  </MDBRow>
+                    
+                                  <MDBInput wrapperClass='mb-4' label='Email' id='form1' type='email'/>
+                                  <MDBInput wrapperClass='mb-4' label='Password' id='form1' type='password'/>
+                    
+                                  <div className='d-flex justify-content-center mb-4'>
+                                    <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Subscribe to our newsletter' />
+                                  </div>
+                                  
+                                  <MDBBtn className='w-100 mb-4' size='md'>sign up</MDBBtn>
+                                  
+                                  <div className="text-center">
+                                    
+                                    <p>or sign up with:</p>
+                                    
+                                    <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
+                                      <MDBIcon fab icon='facebook-f' size="sm"/>
+                                    </MDBBtn>
+                    
+                                    <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
+                                      <MDBIcon fab icon='twitter' size="sm"/>
+                                    </MDBBtn>
+                    
+                                    <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
+                                      <MDBIcon fab icon='google' size="sm"/>
+                                    </MDBBtn>
+                    
+                                    <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
+                                      <MDBIcon fab icon='github' size="sm"/>
+                                    </MDBBtn>
+                                  
+                                  </div>
+                                
+                                </MDBCardBody>
+                              </MDBCard>
+                            
+                            </MDBCol>
+                          
+                          </MDBRow>                                            
+                    
+                        </MDBContainer>
+                      );
+                    }
+                    
+                    export default App;                    
+
+
+                  </code>
+
+                  <code data-lang="css" data-name="CSS">
+                    body {
+                      background-color: hsl(0, 0%, 96%);
+                    }
+                  </code>
+
+                </mdbsnippet>
+
+              </section>
+              <!-- Section: Code -->
+
+            </section>
+            <!--Section: sign up page example-->
+
+            <!--Section: simple login form example-->
+            <section id="section-simple-login-form-example">
+              <!-- Section title -->
+              <h2 class="my-5 mb-2">Simple login form</h2>
+
+              <!--Description-->
+              <p>
+                Login / sign in forms on the other hand should include only the bare minimum of inputs required to sign into the existing account
+              </p>
+
+              <!-- Section: Demo -->
+              <section class="border w-100 rounded-top">
+              
+                <section class="p-5 text-center text-lg-start">
+                  <style>
+                    .rounded-t-5 {
+                      border-top-left-radius: 0.5rem;
+                      border-top-right-radius: 0.5rem;
+                    }
+                
+                    @media (min-width: 992px) {
+                      .rounded-tr-lg-0 {
+                        border-top-right-radius: 0;
+                      }
+                
+                      .rounded-bl-lg-5 {
+                        border-bottom-left-radius: 0.5rem;
+                      }
+                    }
+                  </style>
+                  <div class="card mb-3">
+                    <div class="row g-0 d-flex align-items-center">
+                      <div class="col-lg-4 d-none d-lg-flex">
+                        <img src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg" alt="Trendy Pants and Shoes"
+                          class="w-100 rounded-t-5 rounded-tr-lg-0 rounded-bl-lg-5" />
+                      </div>
+                      <div class="col-lg-8">
+                        <div class="card-body py-5 px-md-5">
+                
+                          <form>
+                            <!-- Email input -->
+                            <div class="form-outline mb-4">
+                              <input type="email" id="form2Example1" class="form-control" />
+                              <label class="form-label" for="form2Example1">Email address</label>
+                            </div>
+                
+                            <!-- Password input -->
+                            <div class="form-outline mb-4">
+                              <input type="password" id="form2Example2" class="form-control" />
+                              <label class="form-label" for="form2Example2">Password</label>
+                            </div>
+                
+                            <!-- 2 column grid layout for inline styling -->
+                            <div class="row mb-4">
+                              <div class="col d-flex justify-content-center">
+                                <!-- Checkbox -->
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+                                  <label class="form-check-label" for="form2Example31"> Remember me </label>
+                                </div>
+                              </div>
+                
+                              <div class="col">
+                                <!-- Simple link -->
+                                <a href="#!">Forgot password?</a>
+                              </div>
+                            </div>
+                
+                            <!-- Submit button -->
+                            <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
+                
+                          </form>
+                
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+              </section>
+
+              <div class="p-4 text-center border border-top-0 mobile-hidden rounded-bottom">
+                <a class="btn btn-link px-3 collapsed" data-mdb-toggle="collapse" href="#simple-login-form-example" role="button"
+                  aria-expanded="false" aria-controls="example9" data-ripple-color="hsl(0, 0%, 67%)">
+                  <i class="fas fa-code me-md-2"></i>
+                  <span class="d-none d-md-inline-block">
+                    Show code
+                  </span>
+                </a>
+
+                <a class="btn btn-link px-3 " data-ripple-color="hsl(0, 0%, 67%)">
+                  <i class="fas fa-file-code me-md-2 pe-none"></i>
+                  <span class="d-none d-md-inline-block export-to-snippet pe-none">
+                    Edit in sandbox
+                  </span>
+                </a>
+              </div>
+
+              <!-- Section: Demo -->
+
+              <!-- Section: Code -->
+              <section class="my-3 collapse" id="simple-login-form-example">
+
+                <mdbsnippet>
+                  <!-- HTML -->
+                  <code data-lang="js" data-name="JSX">
+                    import React from 'react';
+                    import { 
+                      MDBBtn, 
+                      MDBContainer, 
+                      MDBCard, 
+                      MDBCardBody, 
+                      MDBCardImage, 
+                      MDBRow, 
+                      MDBCol, 
+                      MDBInput, 
+                      MDBCheckbox 
+                    } 
+                    from 'mdb-react-ui-kit';
+
+                    function App() {
+                      return (
+                        <MDBContainer className='my-5'>
+                          <MDBCard>
+                            
+                            <MDBRow className='g-0 d-flex align-items-center'>
+                              
+                              <MDBCol md='4'>
+                                <MDBCardImage src='https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg' alt='phone' className='rounded-t-5 rounded-tr-lg-0' fluid />
+                              </MDBCol>
+                              
+                              <MDBCol md='8'>
+                                
+                                <MDBCardBody>
+
+                                  <MDBInput wrapperClass='mb-4' label='Email address' id='form1' type='email'/>
+                                  <MDBInput wrapperClass='mb-4' label='Password' id='form2' type='password'/>
+
+                                  <div className="d-flex justify-content-between mx-4 mb-4">
+                                    <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember me' />
+                                    <a href="!#">Forgot password?</a>
+                                  </div>
+                                  
+                                  <MDBBtn className="mb-4 w-100">Sign in</MDBBtn>
+                                
+                                </MDBCardBody>
+                              
+                              </MDBCol>
+                          
+                            </MDBRow>
+                          
+                          </MDBCard>
+                        </MDBContainer>
+                      );
+                    }
+
+                    export default App;
+
+
+                  </code>
+
+                  <code data-lang="css" data-name="CSS">
+                    .rounded-t-5 {
+                      border-top-left-radius: 0.5rem;
+                      border-bottom-left-radius: 0.5rem;
+                   }
+                  
+                  @media (max-width: 550px) {
+                    .rounded-tr-lg-0 {
+                      border-top-right-radius: 0.5rem;
+                      border-bottom-left-radius: 0rem;
+                    }
+                  }
+                  </code>
+
+                </mdbsnippet>
+
+              </section>
+              <!-- Section: Code -->
+
+            </section>
+            <!--Section: simple login form example-->
+
+            <!--Section: registration page example-->
+            <section id="section-registration-page-example">
+              <!-- Section title -->
+              <h2 class="my-5 mb-2">Registration page </h2>
+
+              <!--Description-->
+              <p>
+                Once again, the example below is a sign up not a sign in form. This one uses the <a href="https://mdbootstrap.com/docs/standard/tools/design/masks/">glassmorphism</a> effect along with minimalistic <a href="https://mdbootstrap.com/docs/standard/content-styles/icons/">social media icons</a>.
+              </p>
+
+              <!-- Section: Demo -->
+              <section class="border w-100 p-4 rounded-top">
+              
+                <!-- Section: Design Block -->
+                <section class="background-radial-gradient overflow-hidden rounded-top">
+                  <style>
+                    .background-radial-gradient {
+                      background-color: hsl(218, 41%, 15%);
+                      background-image: radial-gradient(650px circle at 0% 0%,
+                          hsl(218, 41%, 35%) 15%,
+                          hsl(218, 41%, 30%) 35%,
+                          hsl(218, 41%, 20%) 75%,
+                          hsl(218, 41%, 19%) 80%,
+                          transparent 100%),
+                        radial-gradient(1250px circle at 100% 100%,
+                          hsl(218, 41%, 45%) 15%,
+                          hsl(218, 41%, 30%) 35%,
+                          hsl(218, 41%, 20%) 75%,
+                          hsl(218, 41%, 19%) 80%,
+                          transparent 100%);
+                    }
+
+                    #radius-shape-1 {
+                      height: 220px;
+                      width: 220px;
+                      top: -60px;
+                      left: -130px;
+                      background: radial-gradient(#44006b, #ad1fff);
+                      overflow: hidden;
+                    }
+
+                    #radius-shape-2 {
+                      border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+                      bottom: -60px;
+                      right: -110px;
+                      width: 300px;
+                      height: 300px;
+                      background: radial-gradient(#44006b, #ad1fff);
+                      overflow: hidden;
+                    }
+
+                    .bg-glass {
+                      background-color: hsla(0, 0%, 100%, 0.9) !important;
+                      backdrop-filter: saturate(200%) blur(25px);
+                    }
+                  </style>
+
+                  <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+                    <div class="row gx-lg-5 align-items-center mb-5">
+                      <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+                        <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+                          The best offer <br />
+                          <span style="color: hsl(218, 81%, 75%)">for your business</span>
+                        </h1>
+                        <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
+                          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                          Temporibus, expedita iusto veniam atque, magni tempora mollitia
+                          dolorum consequatur nulla, neque debitis eos reprehenderit quasi
+                          ab ipsum nisi dolorem modi. Quos?
+                        </p>
+                      </div>
+
+                      <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+                        <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+                        <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+
+                        <div class="card bg-glass">
+                          <div class="card-body px-4 py-5 px-md-5">
+                            <form>
+                              <!-- 2 column grid layout with text inputs for the first and last names -->
+                              <div class="row">
+                                <div class="col-md-6 mb-4">
+                                  <div class="form-outline">
+                                    <input type="text" id="form3Example1" class="form-control" />
+                                    <label class="form-label" for="form3Example1">First name</label>
+                                  </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                  <div class="form-outline">
+                                    <input type="text" id="form3Example2" class="form-control" />
+                                    <label class="form-label" for="form3Example2">Last name</label>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- Email input -->
+                              <div class="form-outline mb-4">
+                                <input type="email" id="form3Example3" class="form-control" />
+                                <label class="form-label" for="form3Example3">Email address</label>
+                              </div>
+
+                              <!-- Password input -->
+                              <div class="form-outline mb-4">
+                                <input type="password" id="form3Example4" class="form-control" />
+                                <label class="form-label" for="form3Example4">Password</label>
+                              </div>
+
+                              <!-- Checkbox -->
+                              <div class="form-check d-flex justify-content-center mb-4">
+                                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                                <label class="form-check-label" for="form2Example33">
+                                  Subscribe to our newsletter
+                                </label>
+                              </div>
+
+                              <!-- Submit button -->
+                              <button type="submit" class="btn btn-primary btn-block mb-4">
+                                Sign up
+                              </button>
+
+                              <!-- Register buttons -->
+                              <div class="text-center">
+                                <p>or sign up with:</p>
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                  <i class="fab fa-facebook-f"></i>
+                                </button>
+
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                  <i class="fab fa-google"></i>
+                                </button>
+
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                  <i class="fab fa-twitter"></i>
+                                </button>
+
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                  <i class="fab fa-github"></i>
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <!-- Section: Design Block -->
+
+              </section>
+
+              <div class="p-4 text-center border border-top-0 mobile-hidden rounded-bottom">
+                <a class="btn btn-link px-3 collapsed" data-mdb-toggle="collapse" href="#registration-page-example" role="button"
+                  aria-expanded="false" aria-controls="example9" data-ripple-color="hsl(0, 0%, 67%)">
+                  <i class="fas fa-code me-md-2"></i>
+                  <span class="d-none d-md-inline-block">
+                    Show code
+                  </span>
+                </a>
+
+                <a class="btn btn-link px-3 " data-ripple-color="hsl(0, 0%, 67%)">
+                  <i class="fas fa-file-code me-md-2 pe-none"></i>
+                  <span class="d-none d-md-inline-block export-to-snippet pe-none">
+                    Edit in sandbox
+                  </span>
+                </a>
+              </div>
+
+              <!-- Section: Demo -->
+
+              <!-- Section: Code -->
+              <section class="my-3 collapse" id="registration-page-example">
+
+                <mdbsnippet>
+                  <!-- HTML -->
+                  <code data-lang="js" data-name="JSX">
+                    import React from 'react';
+                    import { 
+                      MDBBtn, 
+                      MDBContainer, 
+                      MDBRow, 
+                      MDBCol, 
+                      MDBCard, 
+                      MDBCardBody, 
+                      MDBInput, 
+                      MDBCheckbox, 
+                      MDBIcon 
+                    } 
+                    from 'mdb-react-ui-kit';
+
+                    function App() {
+                      return (
+                        <MDBContainer fluid className='p-4 background-radial-gradient overflow-hidden'>
+                          
+                          <MDBRow>
+                            
+                            <MDBCol md='6' className='text-center text-md-start d-flex flex-column justify-content-center'>
+                              
+                              <h1 className="my-5 display-3 fw-bold ls-tight px-3" style={{color: 'hsl(218, 81%, 95%)'}}>
+                                The best offer <br />
+                                <span style={{color: 'hsl(218, 81%, 75%)'}}>for your business</span>
+                              </h1>
+                              
+                              <p className='px-3' style={{color: 'hsl(218, 81%, 85%)'}}>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Eveniet, itaque accusantium odio, soluta, corrupti aliquam
+                                quibusdam tempora at cupiditate quis eum maiores libero
+                                veritatis? Dicta facilis sint aliquid ipsum atque?
+                              </p>
+                            
+                            </MDBCol>
+                            
+                            <MDBCol md='6' className='position-relative'>
+                              
+                              <div id="radius-shape-1" className="position-absolute rounded-circle shadow-5-strong"></div>
+                              <div id="radius-shape-2" className="position-absolute shadow-5-strong"></div>
+                              
+                              <MDBCard className='my-5 bg-glass'>
+                                <MDBCardBody className='p-5'>
+                                  
+                                  <MDBRow>
+                                    <MDBCol col='6'>
+                                      <MDBInput wrapperClass='mb-4' label='First name' id='form1' type='text'/>
+                                    </MDBCol>
+                                    
+                                    <MDBCol col='6'>
+                                      <MDBInput wrapperClass='mb-4' label='Last name' id='form2' type='text'/>
+                                    </MDBCol>
+                                  </MDBRow>
+
+                                  <MDBInput wrapperClass='mb-4' label='Email' id='form3' type='email'/>
+                                  <MDBInput wrapperClass='mb-4' label='Password' id='form4' type='password'/>
+
+                                  <div className='d-flex justify-content-center mb-4'>
+                                    <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Subscribe to our newsletter' />
+                                  </div>
+                                  
+                                  <MDBBtn className='w-100 mb-4' size='md'>sign up</MDBBtn>
+                                  
+                                  <div className="text-center">
+                                    
+                                    <p>or sign up with:</p>
+                                    
+                                    <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
+                                      <MDBIcon fab icon='facebook-f' size="sm"/>
+                                    </MDBBtn>
+
+                                    <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
+                                      <MDBIcon fab icon='twitter' size="sm"/>
+                                    </MDBBtn>
+
+                                    <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
+                                      <MDBIcon fab icon='google' size="sm"/>
+                                    </MDBBtn>
+
+                                    <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
+                                      <MDBIcon fab icon='github' size="sm"/>
+                                    </MDBBtn>
+                                  
+                                  </div>
+                                
+                                </MDBCardBody>
+                              </MDBCard>
+                            
+                            </MDBCol>
+                          
+                          </MDBRow>
+
+                        </MDBContainer>
+                      );
+                    }
+
+                    export default App;
+
+                  </code>
+
+                  <code data-lang="css" data-name="CSS">
+                    .background-radial-gradient {
+                      background-color: hsl(218, 41%, 15%);
+                      background-image: radial-gradient(650px circle at 0% 0%,
+                          hsl(218, 41%, 35%) 15%,
+                          hsl(218, 41%, 30%) 35%,
+                          hsl(218, 41%, 20%) 75%,
+                          hsl(218, 41%, 19%) 80%,
+                          transparent 100%),
+                        radial-gradient(1250px circle at 100% 100%,
+                          hsl(218, 41%, 45%) 15%,
+                          hsl(218, 41%, 30%) 35%,
+                          hsl(218, 41%, 20%) 75%,
+                          hsl(218, 41%, 19%) 80%,
+                          transparent 100%);
+                    }
+                
+                    #radius-shape-1 {
+                      height: 220px;
+                      width: 220px;
+                      top: -60px;
+                      left: -130px;
+                      background: radial-gradient(#44006b, #ad1fff);
+                      overflow: hidden;
+                    }
+                
+                    #radius-shape-2 {
+                      border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+                      bottom: -60px;
+                      right: -110px;
+                      width: 300px;
+                      height: 300px;
+                      background: radial-gradient(#44006b, #ad1fff);
+                      overflow: hidden;
+                    }
+                
+                    .bg-glass {
+                      background-color: hsla(0, 0%, 100%, 0.9) !important;
+                      backdrop-filter: saturate(200%) blur(25px);
+                    }
+                  </code>
+
+                </mdbsnippet>
+
+              </section>
+              <!-- Section: Code -->
+
+            </section>
+            <!--Section: registration page example-->
+
+            <!--Section: registration card example-->
+            <section id="section-registration-card-example">
+              <!-- Section title -->
+              <h2 class="my-5 mb-2">Registration Card </h2>
+
+              <!--Description-->
+              <p>
+                This <a href="https://mdbootstrap.com/docs/b5/react/components/cards/">card</a> also uses <a href="https://mdbootstrap.com/docs/standard/tools/design/masks/">glassmorphism</a> to subtly overlay the image.
+              </p>
+
+              <!-- Section: Demo -->
+              <section class="border w-100 p-4 rounded-top">
+              
+                <!-- Section: Design Block -->
+                <section class="text-center text-lg-start">
+                  <style>
+                    .cascading-right {
+                      margin-right: -50px;
+                    }
+
+                    @media (max-width: 991.98px) {
+                      .cascading-right {
+                        margin-right: 0;
+                      }
+                    }
+                  </style>
+
+                  <!-- Jumbotron -->
+                  <div class="container py-4">
+                    <div class="row g-0 align-items-center">
+                      <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="card cascading-right" style="
+                            background: hsla(0, 0%, 100%, 0.55);
+                            backdrop-filter: blur(30px);
+                            ">
+                          <div class="card-body p-5 shadow-5 text-center">
+                            <h2 class="fw-bold mb-5">Sign up now</h2>
+                            <form>
+                              <!-- 2 column grid layout with text inputs for the first and last names -->
+                              <div class="row">
+                                <div class="col-md-6 mb-4">
+                                  <div class="form-outline">
+                                    <input type="text" id="form3Example1" class="form-control" />
+                                    <label class="form-label" for="form3Example1">First name</label>
+                                  </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                  <div class="form-outline">
+                                    <input type="text" id="form3Example2" class="form-control" />
+                                    <label class="form-label" for="form3Example2">Last name</label>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- Email input -->
+                              <div class="form-outline mb-4">
+                                <input type="email" id="form3Example3" class="form-control" />
+                                <label class="form-label" for="form3Example3">Email address</label>
+                              </div>
+
+                              <!-- Password input -->
+                              <div class="form-outline mb-4">
+                                <input type="password" id="form3Example4" class="form-control" />
+                                <label class="form-label" for="form3Example4">Password</label>
+                              </div>
+
+                              <!-- Checkbox -->
+                              <div class="form-check d-flex justify-content-center mb-4">
+                                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                                <label class="form-check-label" for="form2Example33">
+                                  Subscribe to our newsletter
+                                </label>
+                              </div>
+
+                              <!-- Submit button -->
+                              <button type="submit" class="btn btn-primary btn-block mb-4">
+                                Sign up
+                              </button>
+
+                              <!-- Register buttons -->
+                              <div class="text-center">
+                                <p>or sign up with:</p>
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                  <i class="fab fa-facebook-f"></i>
+                                </button>
+
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                  <i class="fab fa-google"></i>
+                                </button>
+
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                  <i class="fab fa-twitter"></i>
+                                </button>
+
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                  <i class="fab fa-github"></i>
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6 mb-5 mb-lg-0">
+                        <img src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg" class="w-100 rounded-4 shadow-4"
+                          alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Jumbotron -->
+                </section>
+                <!-- Section: Design Block -->
+
+              </section>
+
+              <div class="p-4 text-center border border-top-0 mobile-hidden rounded-bottom">
+                <a class="btn btn-link px-3 collapsed" data-mdb-toggle="collapse" href="#registration-card-example" role="button"
+                  aria-expanded="false" aria-controls="example9" data-ripple-color="hsl(0, 0%, 67%)">
+                  <i class="fas fa-code me-md-2"></i>
+                  <span class="d-none d-md-inline-block">
+                    Show code
+                  </span>
+                </a>
+
+                <a class="btn btn-link px-3 " data-ripple-color="hsl(0, 0%, 67%)">
+                  <i class="fas fa-file-code me-md-2 pe-none"></i>
+                  <span class="d-none d-md-inline-block export-to-snippet pe-none">
+                    Edit in sandbox
+                  </span>
+                </a>
+              </div>
+
+              <!-- Section: Demo -->
+
+              <!-- Section: Code -->
+              <section class="my-3 collapse" id="registration-card-example">
+
+                <mdbsnippet>
+                  <!-- HTML -->
+                  <code data-lang="js" data-name="JSX">
+                    import React from 'react';
+                    import { 
+                      MDBBtn, 
+                      MDBContainer, 
+                      MDBCard, 
+                      MDBCardBody, 
+                      MDBInput, 
+                      MDBIcon, 
+                      MDBRow, 
+                      MDBCol, 
+                      MDBCheckbox 
+                    } 
+                    from 'mdb-react-ui-kit';
+
+                    function App() {
+                      return (
+                        <MDBContainer fluid className='my-5'>
+                          
+                          <MDBRow className='g-0 align-items-center'>
+                            <MDBCol col='6'>
+                              
+                              <MDBCard className='my-5 cascading-right' style={{background: 'hsla(0, 0%, 100%, 0.55)',  backdropFilter: 'blur(30px)'}}>
+                                <MDBCardBody className='p-5 shadow-5 text-center'>
+                                  
+                                  <h2 className="fw-bold mb-5">Sign up now</h2>
+                                  
+                                  <MDBRow>
+                                    <MDBCol col='6'>
+                                      <MDBInput wrapperClass='mb-4' label='First name' id='form1' type='text'/>
+                                    </MDBCol>
+                                    
+                                    <MDBCol col='6'>
+                                      <MDBInput wrapperClass='mb-4' label='Last name' id='form2' type='text'/>
+                                    </MDBCol>
+                                  </MDBRow>
+
+                                  <MDBInput wrapperClass='mb-4' label='Email' id='form3' type='email'/>
+                                  <MDBInput wrapperClass='mb-4' label='Password' id='form4' type='password'/>
+
+                                  <div className='d-flex justify-content-center mb-4'>
+                                    <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Subscribe to our newsletter' />
+                                  </div>
+                                  
+                                  <MDBBtn className='w-100 mb-4' size='md'>sign up</MDBBtn>
+                                  
+                                  <div className="text-center">
+                                    
+                                    <p>or sign up with:</p>
+                                    
+                                    <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
+                                      <MDBIcon fab icon='facebook-f' size="sm"/>
+                                    </MDBBtn>
+
+                                    <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
+                                      <MDBIcon fab icon='twitter' size="sm"/>
+                                    </MDBBtn>
+
+                                    <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
+                                      <MDBIcon fab icon='google' size="sm"/>
+                                    </MDBBtn>
+
+                                    <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
+                                      <MDBIcon fab icon='github' size="sm"/>
+                                    </MDBBtn>
+                                  
+                                  </div>
+                                
+                                </MDBCardBody>
+                              </MDBCard>
+                            </MDBCol>
+                            
+                            <MDBCol col='6'>
+                              <img src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg" class="w-100 rounded-4 shadow-4"
+                                alt="" fluid/>
+                            </MDBCol>
+                          
+                          </MDBRow>
+
+                        </MDBContainer>
+                      );
+                    }
+
+                    export default App;
+
+
+
+                  </code>
+
+                  <code data-lang="css" data-name="CSS">
+                    .cascading-right {
+                      margin-right: -50px;
+                    }
+                
+                    @media (max-width: 900px) {
+                      .cascading-right {
+                        margin-right: 0;
+                      }
+                    }
+                  </code>
+
+                </mdbsnippet>
+
+              </section>
+              <!-- Section: Code -->
+
+            </section>
+            <!--Section: registration card example-->
+
+            <!--Section: sign up example example-->
+            <section id="section-sign-up-example">
+              <!-- Section title -->
+              <h2 class="my-5 mb-2">Sign up example </h2>
+
+              <!--Description-->
+              <p>
+                The last sign up example doesn't use columns. Instead it is embedded inside of a <a href="https://mdbootstrap.com/docs/b5/react/navigation/headers/">jumbotron</a> card that spans the entire width of the signup page.
+              </p>
+
+              <!-- Section: Demo -->
+              <section class="border w-100 p-4 rounded-top">
+              
+                <!-- Section: Design Block -->
+                <section class="text-center">
+                  <!-- Background image -->
+                  <div class="p-5 bg-image" style="
+                        background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg');
+                        height: 300px;
+                        "></div>
+                  <!-- Background image -->
+
+                  <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+                        margin-top: -100px;
+                        background: hsla(0, 0%, 100%, 0.8);
+                        backdrop-filter: blur(30px);
+                        ">
+                    <div class="card-body py-5 px-md-5">
+
+                      <div class="row d-flex justify-content-center">
+                        <div class="col-lg-8">
+                          <h2 class="fw-bold mb-5">Sign up now</h2>
+                          <form>
+                            <!-- 2 column grid layout with text inputs for the first and last names -->
+                            <div class="row">
+                              <div class="col-md-6 mb-4">
+                                <div class="form-outline">
+                                  <input type="text" id="form3Example1" class="form-control" />
+                                  <label class="form-label" for="form3Example1">First name</label>
+                                </div>
+                              </div>
+                              <div class="col-md-6 mb-4">
+                                <div class="form-outline">
+                                  <input type="text" id="form3Example2" class="form-control" />
+                                  <label class="form-label" for="form3Example2">Last name</label>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- Email input -->
+                            <div class="form-outline mb-4">
+                              <input type="email" id="form3Example3" class="form-control" />
+                              <label class="form-label" for="form3Example3">Email address</label>
+                            </div>
+
+                            <!-- Password input -->
+                            <div class="form-outline mb-4">
+                              <input type="password" id="form3Example4" class="form-control" />
+                              <label class="form-label" for="form3Example4">Password</label>
+                            </div>
+
+                            <!-- Checkbox -->
+                            <div class="form-check d-flex justify-content-center mb-4">
+                              <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                              <label class="form-check-label" for="form2Example33">
+                                Subscribe to our newsletter
+                              </label>
+                            </div>
+
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-primary btn-block mb-4">
+                              Sign up
+                            </button>
+
+                            <!-- Register buttons -->
+                            <div class="text-center">
+                              <p>or sign up with:</p>
+                              <button type="button" class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-facebook-f"></i>
+                              </button>
+
+                              <button type="button" class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-google"></i>
+                              </button>
+
+                              <button type="button" class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-twitter"></i>
+                              </button>
+
+                              <button type="button" class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-github"></i>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <!-- Section: Design Block -->
+
+              </section>
+
+              <div class="p-4 text-center border border-top-0 mobile-hidden rounded-bottom">
+                <a class="btn btn-link px-3 collapsed" data-mdb-toggle="collapse" href="#sign-up-example" role="button"
+                  aria-expanded="false" aria-controls="example9" data-ripple-color="hsl(0, 0%, 67%)">
+                  <i class="fas fa-code me-md-2"></i>
+                  <span class="d-none d-md-inline-block">
+                    Show code
+                  </span>
+                </a>
+
+                <a class="btn btn-link px-3 " data-ripple-color="hsl(0, 0%, 67%)">
+                  <i class="fas fa-file-code me-md-2 pe-none"></i>
+                  <span class="d-none d-md-inline-block export-to-snippet pe-none">
+                    Edit in sandbox
+                  </span>
+                </a>
+              </div>
+
+              <!-- Section: Demo -->
+
+              <!-- Section: Code -->
+              <section class="my-3 collapse" id="sign-up-example">
+
+                <mdbsnippet>
+                  <!-- HTML -->
+                  <code data-lang="js" data-name="JSX">
+                    import React from 'react';
+                    import { 
+                      MDBBtn, 
+                      MDBContainer, 
+                      MDBCard, 
+                      MDBCardBody, 
+                      MDBCol, 
+                      MDBRow, 
+                      MDBInput, 
+                      MDBCheckbox, 
+                      MDBIcon 
+                    } 
+                    from 'mdb-react-ui-kit';
+
+                    function App() {
+                      return (
+                        <MDBContainer fluid>
+                          
+                          <div className="p-5 bg-image" style={{backgroundImage: 'url(https://mdbootstrap.com/img/new/textures/full/171.jpg)', height: '300px'}}></div>
+                          
+                          <MDBCard className='mx-5 mb-5 p-5 shadow-5' style={{marginTop: '-100px', background: 'hsla(0, 0%, 100%, 0.8)', backdropFilter: 'blur(30px)'}}>
+                            <MDBCardBody className='p-5 text-center'>
+                              
+                              <h2 className="fw-bold mb-5">Sign up now</h2>
+                              
+                              <MDBRow>
+                                <MDBCol col='6'>
+                                  <MDBInput wrapperClass='mb-4' label='First name' id='form1' type='text'/>
+                                </MDBCol>
+                                
+                                <MDBCol col='6'>
+                                  <MDBInput wrapperClass='mb-4' label='Last name' id='form1' type='text'/>
+                                </MDBCol>
+                              </MDBRow>
+
+                              <MDBInput wrapperClass='mb-4' label='Email' id='form1' type='email'/>
+                              <MDBInput wrapperClass='mb-4' label='Password' id='form1' type='password'/>
+
+                              <div className='d-flex justify-content-center mb-4'>
+                                <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Subscribe to our newsletter' />
+                              </div>
+                              
+                              <MDBBtn className='w-100 mb-4' size='md'>sign up</MDBBtn>
+                              
+                              <div className="text-center">
+                                
+                                <p>or sign up with:</p>
+                                
+                                <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
+                                  <MDBIcon fab icon='facebook-f' size="sm"/>
+                                </MDBBtn>
+
+                                <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
+                                  <MDBIcon fab icon='twitter' size="sm"/>
+                                </MDBBtn>
+
+                                <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
+                                  <MDBIcon fab icon='google' size="sm"/>
+                                </MDBBtn>
+
+                                <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
+                                  <MDBIcon fab icon='github' size="sm"/>
+                                </MDBBtn>
+                              
+                              </div>
+                            
+                            </MDBCardBody>
+                          </MDBCard>
+
+                        </MDBContainer>
+                      );
+                    }
+
+                    export default App;
+
+
+                  </code>
+
+                </mdbsnippet>
+
+              </section>
+              <!-- Section: Code -->
+
+            </section>
+            <!--Section: registration card example-->
+ 
+ 
+
+          </section>
+          <!--Section: Docs content-->
+
+          <hr class="my-5">
+
+          <section id="section-related-resources">
+
+            <style>
+              .btn-tag {
+                background-color: #ECEFF1;
+                text-transform: capitalize !important;
+                margin-bottom: 10px;
+                box-shadow: none;
+              }
+        
+              .btn-tag:hover {
+                box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .25), 0 3px 10px 5px rgba(0, 0, 0, 0.05) !important;
+              }
+            </style>
+
+            <h2>Related resources</h2>
+
+            <!--Chips with links-->
+            <div class="justify-content-start text-start w-100 my-5">
+
+              <a target="_blank" href="https://mdbootstrap.com/docs/b5/react/navigation/pills/" class="btn btn-tag btn-rounded m-1"
+                data-mdb-close="true">
+                Pills</a>
+
+              <a href="https://mdbootstrap.com/docs/b5/react/forms/input-fields/" class="btn btn-tag btn-rounded m-1"
+                data-mdb-close="true">
+                Input Fields</a>
+              
+              <a href="https://mdbootstrap.com/docs/b5/react/layout/grid/" class="btn btn-tag btn-rounded m-1"
+                data-mdb-close="true">
+                Grid System</a>
+
+              <a href="https://mdbootstrap.com/docs/standard/tools/design/gradients/" class="btn btn-tag btn-rounded m-1"
+                data-mdb-close="true">
+                Gradient Generator</a>
+
+              <a href="https://mdbootstrap.com/docs/standard/extended/product-cards/" class="btn btn-tag btn-rounded m-1"
+                data-mdb-close="true">
+                Product cards</a>
+
+              <a href="https://mdbootstrap.com/docs/b5/react/components/cards/" class="btn btn-tag btn-rounded m-1"
+                data-mdb-close="true">
+                Cards</a>
+
+              <a href="https://mdbootstrap.com/docs/b5/react/content-styles/images/" class="btn btn-tag btn-rounded m-1"
+                data-mdb-close="true">
+                Images</a>
+
+              <a href="https://mdbootstrap.com/docs/b5/react/components/modal/" class="btn btn-tag btn-rounded m-1"
+                data-mdb-close="true">
+                Popup</a>
+
+              <a href="https://mdbootstrap.com/docs/standard/tools/design/masks/" class="btn btn-tag btn-rounded m-1"
+                data-mdb-close="true">
+                Glassmorphism</a>
+                
+              <a href="https://mdbootstrap.com/docs/standard/content-styles/icons/" class="btn btn-tag btn-rounded m-1"
+                data-mdb-close="true">
+                Icons</a>
+              
+              <a href="https://mdbootstrap.com/docs/b5/react/extended/jumbotron/" class="btn btn-tag btn-rounded m-1"
+                data-mdb-close="true">
+                Jumbotron</a>
+
+            </div>
+
+          </section>
+
+        </div>
+        <!-- Left column -->
+
+        <!-- Right column -->
+        <div class="col-md-2 mb-4 mb-md-0">
+          <style>
+            /* Styles required only for the example above */
+            .scrollspy-example {
+              position: relative;
+              height: 200px;
+              overflow-y: auto;
+            }
+          </style>
+          <!-- Scrollspy -->
+          <div id="scrollspy1" class="sticky-top" style="top: 30px">
+            <ul class="nav flex-column nav-pills menu-sidebar">
+              <!-- Link -->
+              <li class="nav-item">
+                <a class="nav-link active" href="#section-introduction">Introduction</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section-basic-example">Basic example</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section-login-register-example">Login - register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section-login-page-example">Login Page</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section-login-template-example">Login Template</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section-sign-in-form-example">Sign in form</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section-login-card-example">Login Card</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section-login-screen-example">Login Screen</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section-login-modal-example">Login Modal</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section-login-popup-example">Login Popup</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section-sign-up-page-example">Sign up page</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section-simple-login-form-example">Simple login form</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section-registration-page-example">Registration page</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section-registration-card-example">Registration Card</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section-sign-up-example">Sign up example</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section-related-resources">Related resources</a>
+              </li>
+
+              <!-- Link -->
+            </ul>
+          </div>
+          <!-- Scrollspy -->
+        </div>
+        <!-- Right column -->
+      </div>
+    </div>
+  </main>
+  <!-- YOUR WORK HERE -->
+
+  <!-- Prism -->
+
+  <script type="text/javascript" src="https://mdbgo.io/mikolaj-smolenski/mdb5-demo-pro/dev/js/new-prism.js"></script>
+  <script type="text/javascript"
+    src="https://mdbgo.io/mikolaj-smolenski/mdb5-demo-pro/dev/js/dist/mdbsnippet.min.js"></script>
+  <!-- MDB -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript"></script>
+</body>
+
+</html>
