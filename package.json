@@ -1,0 +1,35 @@
+{
+  "name": "@mdbootstrap/react-login-form",
+  "version": "1.0.0",
+  "description": "Responsive React Login form built with Bootstrap 5. Collection of examples for signup forms, full page login templates, login modals & many other sign in designs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iprzybysz/react-login-form.git"
+  },
+  "keywords": [
+    "login form",
+    "login register",
+    "login page",
+    "login template",
+    "sign in form",
+    "login card",
+    "login screen",
+    "login modal",
+    "login popup",
+    "sign up page",
+    "simple login form",
+    "registration page",
+    "registration card",
+    "sign up example"
+  ],
+  "author": "Igor Przybysz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iprzybysz/react-login-form/issues"
+  },
+  "homepage": "https://mdbootstrap.com/docs/b5/react/extended/login-form/"
+}
