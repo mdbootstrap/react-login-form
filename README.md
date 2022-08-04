@@ -86,24 +86,24 @@ You can find other examples [here](https://mdbootstrap.com/docs/b5/react/extende
 
 ## More extended React documentation
 <ul>
-<li><a href="https://mdbootstrap.com/docs/b5/react/extended/code/">React Bootstrap Code</a></li>
-<li><a href="https://mdbootstrap.com/docs/b5/react/extended/gallery/">React Bootstrap Gallery</a></li>
-<li><a href="https://mdbootstrap.com/docs/b5/react/extended/hamburger-menu/">React Bootstrap Hamburger Menu</a></li>
-<li><a href="https://mdbootstrap.com/docs/b5/react/extended/jumbotron/">React Bootstrap Jumbotron</a></li>
-<li><a href="https://mdbootstrap.com/docs/b5/react/extended/maps/">React Bootstrap Maps</a></li>
-<li><a href="https://mdbootstrap.com/docs/b5/react/extended/mega-menu//">React Bootstrap Mega Menu</a></li>
-<li><a href="https://mdbootstrap.com/docs/b5/react/extended/media-object/">React Bootstrap Media object</a></li>
-<li><a href="https://mdbootstrap.com/docs/b5/react/extended/multiselect/">React Bootstrap Multiselect</a></li>
-<li><a href="https://mdbootstrap.com/docs/b5/react/extended/masonry/">React Bootstrap Masonry</a></li>
-<li><a href="https://mdbootstrap.com/docs/b5/react/extended/contact/">React Bootstrap Contact form</a></li>
-<li><a href="https://mdbootstrap.com/docs/b5/react/extended/gradients/">React Bootstrap Gradients</a></li>
-<li><a href="https://mdbootstrap.com/docs/b5/react/extended/pagination/">React Bootstrap Pagination</a></li>
-<li><a href="https://mdbootstrap.com/docs/b5/react/extended/panels/">React Bootstrap Panels</a></li>
-<li><a href="https://mdbootstrap.com/docs/b5/react/extended/social-media/">React Bootstrap Social Media icons & buttons</a></li>
-<li><a href="https://mdbootstrap.com/docs/b5/react/extended/search/">React Bootstrap Search</a></li>
-<li><a href="https://mdbootstrap.com/docs/b5/react/extended/table-sort/">React Bootstrap Table sort</a></li>
-<li><a href="https://mdbootstrap.com/docs/b5/react/extended/table-responsive/">React Bootstrap Table responsive</a></li>
-<li><a href="https://mdbootstrap.com/docs/b5/react/extended/table-scroll/">React Bootstrap Table scroll</a></li>
-<li><a href="https://mdbootstrap.com/docs/b5/react/extended/table-search/">React Bootstrap Table search</a></li>
-<li><a href="https://mdbootstrap.com/docs/b5/react/extended/textarea/">React Bootstrap Textarea</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/code/">React Bootstrap Code</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/gallery/">React Bootstrap Gallery</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/hamburger-menu/">React Bootstrap Hamburger Menu</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/jumbotron/">React Bootstrap Jumbotron</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/maps/">React Bootstrap Maps</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/mega-menu//">React Bootstrap Mega Menu</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/media-object/">React Bootstrap Media object</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/multiselect/">React Bootstrap Multiselect</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/masonry/">React Bootstrap Masonry</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/contact/">React Bootstrap Contact form</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/gradients/">React Bootstrap Gradients</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/pagination/">React Bootstrap Pagination</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/panels/">React Bootstrap Panels</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/social-media/">React Bootstrap Social Media icons & buttons</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/search/">React Bootstrap Search</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/table-sort/">React Bootstrap Table sort</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/table-responsive/">React Bootstrap Table responsive</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/table-scroll/">React Bootstrap Table scroll</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/table-search/">React Bootstrap Table search</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/textarea/">React Bootstrap Textarea</a></li>
 </ul>
